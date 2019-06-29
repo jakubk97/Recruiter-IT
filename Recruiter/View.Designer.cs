@@ -1,6 +1,6 @@
 ﻿namespace Recruiter
 {
-    partial class Form1
+    partial class View
     {
         /// <summary>
         /// Required designer variable.
@@ -28,31 +28,44 @@
         /// </summary>
         private void InitializeComponent()
         {
-            this.userCon1 = new Recruiter.UserCon();
+            this.screen21 = new Recruiter.Screen2();
+            this.screen11 = new Recruiter.Screen1();
             this.SuspendLayout();
             // 
-            // userCon1
+            // screen21
             // 
-            this.userCon1.Location = new System.Drawing.Point(12, 12);
-            this.userCon1.Name = "userCon1";
-            this.userCon1.Size = new System.Drawing.Size(882, 556);
-            this.userCon1.TabIndex = 0;
+            this.screen21.BackColor = System.Drawing.Color.White;
+            this.screen21.Location = new System.Drawing.Point(4, 4);
+            this.screen21.Name = "screen21";
+            this.screen21.Size = new System.Drawing.Size(1000, 720);
+            this.screen21.TabIndex = 1;
             // 
-            // Form1
+            // screen11
+            // 
+            this.screen11.BackColor = System.Drawing.Color.White;
+            this.screen11.Location = new System.Drawing.Point(4, 4);
+            this.screen11.Name = "screen11";
+            this.screen11.Size = new System.Drawing.Size(1000, 720);
+            this.screen11.TabIndex = 0;
+            // 
+            // View
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(906, 580);
-            this.Controls.Add(this.userCon1);
-            this.Name = "Form1";
-            this.Text = "Form1";
+            this.BackColor = System.Drawing.Color.White;
+            this.ClientSize = new System.Drawing.Size(1008, 729);
+            this.Controls.Add(this.screen21);
+            this.Controls.Add(this.screen11);
+            this.Name = "View";
+            this.Text = "IT Recruiter";
             this.ResumeLayout(false);
 
         }
 
         #endregion
 
-        private UserCon userCon1;
+        private Screen1 screen11;
+        private Screen2 screen21;
     }
 }
 

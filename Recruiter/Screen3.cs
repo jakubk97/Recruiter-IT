@@ -1,19 +1,20 @@
 ﻿using System;
 using System.Collections.Generic;
 using System.ComponentModel;
-using System.Data;
 using System.Drawing;
+using System.Data;
 using System.Linq;
 using System.Text;
 using System.Windows.Forms;
 
 namespace Recruiter
 {
-    public partial class Form1 : Form
+    public partial class Screen3 : UserControl
     {
-        public Form1()
+        public Screen3()
         {
             InitializeComponent();
         }
+
     }
 }
