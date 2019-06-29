@@ -42,6 +42,7 @@
             this.PrefPositionLabel = new System.Windows.Forms.Label();
             this.PrefPosition = new System.Windows.Forms.TextBox();
             this.Title = new System.Windows.Forms.Label();
+            this.Prev = new System.Windows.Forms.Button();
             this.SuspendLayout();
             // 
             // Next
@@ -57,6 +58,7 @@
             this.Next.TabIndex = 35;
             this.Next.Text = "Dalej";
             this.Next.UseVisualStyleBackColor = false;
+            this.Next.Click += new System.EventHandler(this.Next_Click);
             // 
             // CompanyKnowledgeLabel
             // 
@@ -204,11 +206,27 @@
             this.Title.Text = "Preferencje";
             this.Title.TextAlign = System.Drawing.ContentAlignment.TopCenter;
             // 
+            // Prev
+            // 
+            this.Prev.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(30)))), ((int)(((byte)(80)))), ((int)(((byte)(190)))));
+            this.Prev.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.Prev.Font = new System.Drawing.Font("Segoe UI", 16F);
+            this.Prev.ForeColor = System.Drawing.Color.White;
+            this.Prev.Location = new System.Drawing.Point(284, 647);
+            this.Prev.Name = "Prev";
+            this.Prev.Padding = new System.Windows.Forms.Padding(0, 0, 0, 3);
+            this.Prev.Size = new System.Drawing.Size(140, 50);
+            this.Prev.TabIndex = 44;
+            this.Prev.Text = "Wstecz";
+            this.Prev.UseVisualStyleBackColor = false;
+            this.Prev.Click += new System.EventHandler(this.Prev_Click);
+            // 
             // Screen7
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.White;
+            this.Controls.Add(this.Prev);
             this.Controls.Add(this.Next);
             this.Controls.Add(this.CompanyKnowledgeLabel);
             this.Controls.Add(this.CompanyKnowledge);
@@ -246,5 +264,6 @@
         private System.Windows.Forms.Label PrefPositionLabel;
         private System.Windows.Forms.TextBox PrefPosition;
         private System.Windows.Forms.Label Title;
+        private System.Windows.Forms.Button Prev;
     }
 }

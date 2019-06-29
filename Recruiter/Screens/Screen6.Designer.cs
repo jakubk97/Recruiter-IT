@@ -37,6 +37,7 @@
             this.LinksLabel2 = new System.Windows.Forms.Label();
             this.LinksLabel = new System.Windows.Forms.Label();
             this.Links = new System.Windows.Forms.RichTextBox();
+            this.Prev = new System.Windows.Forms.Button();
             this.SuspendLayout();
             // 
             // Next
@@ -52,6 +53,7 @@
             this.Next.TabIndex = 53;
             this.Next.Text = "Dalej";
             this.Next.UseVisualStyleBackColor = false;
+            this.Next.Click += new System.EventHandler(this.Next_Click);
             // 
             // Specialization
             // 
@@ -148,11 +150,27 @@
             this.Links.TabIndex = 63;
             this.Links.Text = "";
             // 
+            // Prev
+            // 
+            this.Prev.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(30)))), ((int)(((byte)(80)))), ((int)(((byte)(190)))));
+            this.Prev.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.Prev.Font = new System.Drawing.Font("Segoe UI", 16F);
+            this.Prev.ForeColor = System.Drawing.Color.White;
+            this.Prev.Location = new System.Drawing.Point(284, 647);
+            this.Prev.Name = "Prev";
+            this.Prev.Padding = new System.Windows.Forms.Padding(0, 0, 0, 3);
+            this.Prev.Size = new System.Drawing.Size(140, 50);
+            this.Prev.TabIndex = 64;
+            this.Prev.Text = "Wstecz";
+            this.Prev.UseVisualStyleBackColor = false;
+            this.Prev.Click += new System.EventHandler(this.Prev_Click);
+            // 
             // Screen6
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.White;
+            this.Controls.Add(this.Prev);
             this.Controls.Add(this.Links);
             this.Controls.Add(this.LinksLabel2);
             this.Controls.Add(this.LinksLabel);
@@ -179,5 +197,6 @@
         private System.Windows.Forms.Label LinksLabel2;
         private System.Windows.Forms.Label LinksLabel;
         private System.Windows.Forms.RichTextBox Links;
+        private System.Windows.Forms.Button Prev;
     }
 }

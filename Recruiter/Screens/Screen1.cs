@@ -15,5 +15,16 @@ namespace Recruiter
         {
             InitializeComponent();
         }
+
+        #region Events
+        public event Action StartForm2;
+
+        #endregion
+
+        private void Start_Click(object sender, EventArgs e)
+        {
+            if (StartForm2 != null)
+                StartForm2();
+        }
     }
 }

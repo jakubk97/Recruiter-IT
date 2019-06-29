@@ -38,6 +38,7 @@
             this.Language4ComboBox = new System.Windows.Forms.ComboBox();
             this.Language4Checkbox = new System.Windows.Forms.CheckBox();
             this.Language1Checkbox = new System.Windows.Forms.CheckBox();
+            this.Prev = new System.Windows.Forms.Button();
             this.SuspendLayout();
             // 
             // Next
@@ -53,6 +54,7 @@
             this.Next.TabIndex = 35;
             this.Next.Text = "Dalej";
             this.Next.UseVisualStyleBackColor = false;
+            this.Next.Click += new System.EventHandler(this.Next_Click);
             // 
             // Title
             // 
@@ -152,14 +154,30 @@
             this.Language1Checkbox.Name = "Language1Checkbox";
             this.Language1Checkbox.Size = new System.Drawing.Size(102, 34);
             this.Language1Checkbox.TabIndex = 47;
-            this.Language1Checkbox.Text = "Język 2";
+            this.Language1Checkbox.Text = "Język 1";
             this.Language1Checkbox.UseVisualStyleBackColor = true;
+            // 
+            // Prev
+            // 
+            this.Prev.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(30)))), ((int)(((byte)(80)))), ((int)(((byte)(190)))));
+            this.Prev.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.Prev.Font = new System.Drawing.Font("Segoe UI", 16F);
+            this.Prev.ForeColor = System.Drawing.Color.White;
+            this.Prev.Location = new System.Drawing.Point(284, 647);
+            this.Prev.Name = "Prev";
+            this.Prev.Padding = new System.Windows.Forms.Padding(0, 0, 0, 3);
+            this.Prev.Size = new System.Drawing.Size(140, 50);
+            this.Prev.TabIndex = 48;
+            this.Prev.Text = "Wstecz";
+            this.Prev.UseVisualStyleBackColor = false;
+            this.Prev.Click += new System.EventHandler(this.Prev_Click);
             // 
             // Screen4
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.White;
+            this.Controls.Add(this.Prev);
             this.Controls.Add(this.Language1Checkbox);
             this.Controls.Add(this.Language4ComboBox);
             this.Controls.Add(this.Language4Checkbox);
@@ -189,5 +207,6 @@
         private System.Windows.Forms.ComboBox Language4ComboBox;
         private System.Windows.Forms.CheckBox Language4Checkbox;
         private System.Windows.Forms.CheckBox Language1Checkbox;
+        private System.Windows.Forms.Button Prev;
     }
 }

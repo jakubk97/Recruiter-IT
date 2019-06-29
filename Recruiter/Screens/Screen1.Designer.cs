@@ -60,6 +60,7 @@
             this.Start.TabIndex = 1;
             this.Start.Text = "Rozpocznij";
             this.Start.UseVisualStyleBackColor = false;
+            this.Start.Click += new System.EventHandler(this.Start_Click);
             // 
             // Screen1
             // 
@@ -69,7 +70,7 @@
             this.Controls.Add(this.Start);
             this.Controls.Add(this.Title);
             this.Name = "Screen1";
-            this.Size = new System.Drawing.Size(1007, 725);
+            this.Size = new System.Drawing.Size(1008, 729);
             ((System.ComponentModel.ISupportInitialize)(this.bindingSource1)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();

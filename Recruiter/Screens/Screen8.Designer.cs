@@ -34,6 +34,7 @@
             this.RecruiterInfo = new System.Windows.Forms.RichTextBox();
             this.Interests = new System.Windows.Forms.RichTextBox();
             this.InterestsLabel = new System.Windows.Forms.Label();
+            this.Prev = new System.Windows.Forms.Button();
             this.SuspendLayout();
             // 
             // End
@@ -49,6 +50,7 @@
             this.End.TabIndex = 49;
             this.End.Text = "Zakończ";
             this.End.UseVisualStyleBackColor = false;
+            this.End.Click += new System.EventHandler(this.End_Click);
             // 
             // RecruiterInfoLabel
             // 
@@ -109,11 +111,27 @@
             this.InterestsLabel.Text = "Zainteresowania";
             this.InterestsLabel.TextAlign = System.Drawing.ContentAlignment.TopCenter;
             // 
+            // Prev
+            // 
+            this.Prev.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(30)))), ((int)(((byte)(80)))), ((int)(((byte)(190)))));
+            this.Prev.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.Prev.Font = new System.Drawing.Font("Segoe UI", 16F);
+            this.Prev.ForeColor = System.Drawing.Color.White;
+            this.Prev.Location = new System.Drawing.Point(284, 647);
+            this.Prev.Name = "Prev";
+            this.Prev.Padding = new System.Windows.Forms.Padding(0, 0, 0, 3);
+            this.Prev.Size = new System.Drawing.Size(140, 50);
+            this.Prev.TabIndex = 67;
+            this.Prev.Text = "Wstecz";
+            this.Prev.UseVisualStyleBackColor = false;
+            this.Prev.Click += new System.EventHandler(this.Prev_Click);
+            // 
             // Screen8
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.White;
+            this.Controls.Add(this.Prev);
             this.Controls.Add(this.Interests);
             this.Controls.Add(this.InterestsLabel);
             this.Controls.Add(this.RecruiterInfo);
@@ -135,5 +153,6 @@
         private System.Windows.Forms.RichTextBox RecruiterInfo;
         private System.Windows.Forms.RichTextBox Interests;
         private System.Windows.Forms.Label InterestsLabel;
+        private System.Windows.Forms.Button Prev;
     }
 }

@@ -64,6 +64,7 @@
             this.Firm4WorkDates = new System.Windows.Forms.TextBox();
             this.Firm4Position = new System.Windows.Forms.TextBox();
             this.Firm4PositionLabel = new System.Windows.Forms.Label();
+            this.Prev = new System.Windows.Forms.Button();
             this.RadioButtonsPanel.SuspendLayout();
             this.Firm1Panel.SuspendLayout();
             this.Firm3Panel.SuspendLayout();
@@ -84,6 +85,7 @@
             this.Next.TabIndex = 35;
             this.Next.Text = "Dalej";
             this.Next.UseVisualStyleBackColor = false;
+            this.Next.Click += new System.EventHandler(this.Next_Click);
             // 
             // Email
             // 
@@ -477,11 +479,27 @@
             this.Firm4PositionLabel.Text = "Stanowisko";
             this.Firm4PositionLabel.TextAlign = System.Drawing.ContentAlignment.TopCenter;
             // 
+            // Prev
+            // 
+            this.Prev.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(30)))), ((int)(((byte)(80)))), ((int)(((byte)(190)))));
+            this.Prev.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.Prev.Font = new System.Drawing.Font("Segoe UI", 16F);
+            this.Prev.ForeColor = System.Drawing.Color.White;
+            this.Prev.Location = new System.Drawing.Point(284, 647);
+            this.Prev.Name = "Prev";
+            this.Prev.Padding = new System.Windows.Forms.Padding(0, 0, 0, 3);
+            this.Prev.Size = new System.Drawing.Size(140, 50);
+            this.Prev.TabIndex = 57;
+            this.Prev.Text = "Wstecz";
+            this.Prev.UseVisualStyleBackColor = false;
+            this.Prev.Click += new System.EventHandler(this.Prev_Click);
+            // 
             // Screen5
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.White;
+            this.Controls.Add(this.Prev);
             this.Controls.Add(this.Firm4Panel);
             this.Controls.Add(this.Firm2Panel);
             this.Controls.Add(this.Firm3Panel);
@@ -547,5 +565,6 @@
         private System.Windows.Forms.TextBox Firm4WorkDates;
         private System.Windows.Forms.TextBox Firm4Position;
         private System.Windows.Forms.Label Firm4PositionLabel;
+        private System.Windows.Forms.Button Prev;
     }
 }

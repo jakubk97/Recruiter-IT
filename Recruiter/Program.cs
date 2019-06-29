@@ -13,9 +13,10 @@ namespace Recruiter
         [STAThread]
         static void Main()
         {
-            Application.EnableVisualStyles();
-            Application.SetCompatibleTextRenderingDefault(false);
-            Application.Run(new View());
+            Model model = new Model();
+            IView view = new View();
+            Presenter presenter = new Presenter(view, model);
+            Application.Run((View)view);
         }
     }
 }
