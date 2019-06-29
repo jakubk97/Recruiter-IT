@@ -44,7 +44,61 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
-    <Compile Include="Form1.cs">
+    <Compile Include="Screen4.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="Screen4.Designer.cs">
+      <DependentUpon>Screen4.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Screen1.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="Screen1.Designer.cs">
+      <DependentUpon>Screen1.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Screen2.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="Screen2.Designer.cs">
+      <DependentUpon>Screen2.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Screen3.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="Screen3.Designer.cs">
+      <DependentUpon>Screen3.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Screen5.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="Screen5.Designer.cs">
+      <DependentUpon>Screen5.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Screen6.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="Screen6.Designer.cs">
+      <DependentUpon>Screen6.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Screen7.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="Screen7.Designer.cs">
+      <DependentUpon>Screen7.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Screen8.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="Screen8.Designer.cs">
+      <DependentUpon>Screen8.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Screen9.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="Screen9.Designer.cs">
+      <DependentUpon>Screen9.cs</DependentUpon>
+    </Compile>
+    <Compile Include="View.cs">
       <SubType>Form</SubType>
     </Compile>
     <Compile Include="View.Designer.cs">

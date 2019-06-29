@@ -493,7 +493,7 @@
             this.Controls.Add(this.FirstName);
             this.Controls.Add(this.Title);
             this.Name = "Screen5";
-            this.Size = new System.Drawing.Size(1000, 720);
+            this.Size = new System.Drawing.Size(1007, 725);
             this.RadioButtonsPanel.ResumeLayout(false);
             this.RadioButtonsPanel.PerformLayout();
             this.Firm1Panel.ResumeLayout(false);

@@ -28,25 +28,16 @@
         /// </summary>
         private void InitializeComponent()
         {
-            this.screen21 = new Recruiter.Screen2();
-            this.screen11 = new Recruiter.Screen1();
+            this.screen12 = new Recruiter.Screen1();
             this.SuspendLayout();
             // 
-            // screen21
+            // screen12
             // 
-            this.screen21.BackColor = System.Drawing.Color.White;
-            this.screen21.Location = new System.Drawing.Point(4, 4);
-            this.screen21.Name = "screen21";
-            this.screen21.Size = new System.Drawing.Size(1000, 720);
-            this.screen21.TabIndex = 1;
-            // 
-            // screen11
-            // 
-            this.screen11.BackColor = System.Drawing.Color.White;
-            this.screen11.Location = new System.Drawing.Point(4, 4);
-            this.screen11.Name = "screen11";
-            this.screen11.Size = new System.Drawing.Size(1000, 720);
-            this.screen11.TabIndex = 0;
+            this.screen12.BackColor = System.Drawing.Color.White;
+            this.screen12.Location = new System.Drawing.Point(-1, 1);
+            this.screen12.Name = "screen12";
+            this.screen12.Size = new System.Drawing.Size(1007, 725);
+            this.screen12.TabIndex = 0;
             // 
             // View
             // 
@@ -54,8 +45,7 @@
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.White;
             this.ClientSize = new System.Drawing.Size(1008, 729);
-            this.Controls.Add(this.screen21);
-            this.Controls.Add(this.screen11);
+            this.Controls.Add(this.screen12);
             this.Name = "View";
             this.Text = "IT Recruiter";
             this.ResumeLayout(false);
@@ -66,6 +56,7 @@
 
         private Screen1 screen11;
         private Screen2 screen21;
+        private Screen1 screen12;
     }
 }
 

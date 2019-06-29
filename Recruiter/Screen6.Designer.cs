@@ -163,7 +163,7 @@
             this.Controls.Add(this.KnownTech);
             this.Controls.Add(this.Title);
             this.Name = "Screen6";
-            this.Size = new System.Drawing.Size(1000, 720);
+            this.Size = new System.Drawing.Size(1007, 725);
             this.ResumeLayout(false);
             this.PerformLayout();
 

@@ -171,7 +171,7 @@
             this.Controls.Add(this.Next);
             this.Controls.Add(this.Title);
             this.Name = "Screen4";
-            this.Size = new System.Drawing.Size(1000, 720);
+            this.Size = new System.Drawing.Size(1007, 725);
             this.ResumeLayout(false);
             this.PerformLayout();
 
