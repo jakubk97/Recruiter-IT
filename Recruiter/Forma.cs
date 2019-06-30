@@ -17,7 +17,7 @@ namespace Recruiter
 
         private string nazwa="", stanowisko="", data_od="", data_do = "";
 
-        private string technologie="", linki;
+        private string technologie="", linki="";
 
         private string prefstanowisko="", prefoddzial="", prefczaspracy="", wynagrodzenie="", pracaodkiedy="", skadwiesz = "";
 
@@ -104,6 +104,7 @@ namespace Recruiter
         {
             this.zainteresowania = zainteresowania;
             this.infodlarekrutera = infodlarekrutera;
+            Repository.Send();
         }
 
         public string Imie
@@ -347,6 +348,22 @@ namespace Recruiter
             get
             {
                 return drugie;
+            }
+        }
+
+        public string Technologie
+        {
+            get
+            {
+                return technologie;
+            }
+        }
+
+        public string Linki
+        {
+            get
+            {
+                return linki;
             }
         }
     }

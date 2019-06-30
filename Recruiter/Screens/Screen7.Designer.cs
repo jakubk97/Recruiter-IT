@@ -28,11 +28,11 @@
         /// </summary>
         private void InitializeComponent()
         {
+            this.components = new System.ComponentModel.Container();
             this.Next = new System.Windows.Forms.Button();
             this.CompanyKnowledgeLabel = new System.Windows.Forms.Label();
             this.CompanyKnowledge = new System.Windows.Forms.TextBox();
             this.PrefStartDateLabel = new System.Windows.Forms.Label();
-            this.PrefStartDate = new System.Windows.Forms.TextBox();
             this.PrefSalaryLabel = new System.Windows.Forms.Label();
             this.PrefSalary = new System.Windows.Forms.TextBox();
             this.PrefWorktimeLabel = new System.Windows.Forms.Label();
@@ -43,6 +43,9 @@
             this.Prev = new System.Windows.Forms.Button();
             this.label1 = new System.Windows.Forms.Label();
             this.comboBoxPosition = new System.Windows.Forms.ComboBox();
+            this.errorProvider1 = new System.Windows.Forms.ErrorProvider(this.components);
+            this.dateTimePicker1 = new System.Windows.Forms.DateTimePicker();
+            ((System.ComponentModel.ISupportInitialize)(this.errorProvider1)).BeginInit();
             this.SuspendLayout();
             // 
             // Next
@@ -96,16 +99,6 @@
             this.PrefStartDateLabel.Text = "Kiedy możesz rozpocząć?";
             this.PrefStartDateLabel.TextAlign = System.Drawing.ContentAlignment.TopCenter;
             // 
-            // PrefStartDate
-            // 
-            this.PrefStartDate.BackColor = System.Drawing.SystemColors.ScrollBar;
-            this.PrefStartDate.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
-            this.PrefStartDate.Font = new System.Drawing.Font("Segoe UI", 14F);
-            this.PrefStartDate.Location = new System.Drawing.Point(368, 382);
-            this.PrefStartDate.Name = "PrefStartDate";
-            this.PrefStartDate.Size = new System.Drawing.Size(215, 32);
-            this.PrefStartDate.TabIndex = 28;
-            // 
             // PrefSalaryLabel
             // 
             this.PrefSalaryLabel.AutoSize = true;
@@ -128,6 +121,7 @@
             this.PrefSalary.Name = "PrefSalary";
             this.PrefSalary.Size = new System.Drawing.Size(215, 32);
             this.PrefSalary.TabIndex = 26;
+            this.PrefSalary.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.PrefSalary_KeyPress);
             // 
             // PrefWorktimeLabel
             // 
@@ -152,6 +146,7 @@
             this.PrefWorktime.Name = "PrefWorktime";
             this.PrefWorktime.Size = new System.Drawing.Size(215, 32);
             this.PrefWorktime.TabIndex = 24;
+            this.PrefWorktime.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.PrefWorktime_KeyPress);
             // 
             // PrefBranchLabel
             // 
@@ -227,11 +222,28 @@
             this.comboBoxPosition.Size = new System.Drawing.Size(213, 32);
             this.comboBoxPosition.TabIndex = 47;
             // 
+            // errorProvider1
+            // 
+            this.errorProvider1.ContainerControl = this;
+            // 
+            // dateTimePicker1
+            // 
+            this.dateTimePicker1.CalendarMonthBackground = System.Drawing.SystemColors.ScrollBar;
+            this.dateTimePicker1.CustomFormat = "dd-MM-yyyy";
+            this.dateTimePicker1.Font = new System.Drawing.Font("Microsoft Sans Serif", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(238)));
+            this.dateTimePicker1.Location = new System.Drawing.Point(368, 381);
+            this.dateTimePicker1.MinDate = new System.DateTime(1900, 1, 1, 0, 0, 0, 0);
+            this.dateTimePicker1.Name = "dateTimePicker1";
+            this.dateTimePicker1.Size = new System.Drawing.Size(412, 29);
+            this.dateTimePicker1.TabIndex = 48;
+            this.dateTimePicker1.Value = new System.DateTime(2000, 1, 1, 0, 0, 0, 0);
+            // 
             // Screen7
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.White;
+            this.Controls.Add(this.dateTimePicker1);
             this.Controls.Add(this.comboBoxPosition);
             this.Controls.Add(this.label1);
             this.Controls.Add(this.Prev);
@@ -239,7 +251,6 @@
             this.Controls.Add(this.CompanyKnowledgeLabel);
             this.Controls.Add(this.CompanyKnowledge);
             this.Controls.Add(this.PrefStartDateLabel);
-            this.Controls.Add(this.PrefStartDate);
             this.Controls.Add(this.PrefSalaryLabel);
             this.Controls.Add(this.PrefSalary);
             this.Controls.Add(this.PrefWorktimeLabel);
@@ -249,6 +260,7 @@
             this.Controls.Add(this.Title);
             this.Name = "Screen7";
             this.Size = new System.Drawing.Size(1007, 725);
+            ((System.ComponentModel.ISupportInitialize)(this.errorProvider1)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -260,7 +272,6 @@
         private System.Windows.Forms.Label CompanyKnowledgeLabel;
         private System.Windows.Forms.TextBox CompanyKnowledge;
         private System.Windows.Forms.Label PrefStartDateLabel;
-        private System.Windows.Forms.TextBox PrefStartDate;
         private System.Windows.Forms.Label PrefSalaryLabel;
         private System.Windows.Forms.TextBox PrefSalary;
         private System.Windows.Forms.Label PrefWorktimeLabel;
@@ -271,5 +282,7 @@
         private System.Windows.Forms.Button Prev;
         private System.Windows.Forms.Label label1;
         private System.Windows.Forms.ComboBox comboBoxPosition;
+        private System.Windows.Forms.ErrorProvider errorProvider1;
+        private System.Windows.Forms.DateTimePicker dateTimePicker1;
     }
 }

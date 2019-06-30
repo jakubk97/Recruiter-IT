@@ -251,8 +251,10 @@ namespace Recruiter
 
         private void UploadControls6(Panel pan, Forma f)
         {
-            TextBox t1 = pan.Parent.Controls.Find("Links", true)[0] as TextBox;
-            t1.Text = f.Nazwa;
+            RichTextBox t1 = pan.Parent.Controls.Find("Links", true)[0] as RichTextBox;
+            t1.Text = f.Linki;
+            Label l1 = pan.Parent.Controls.Find("labelprev", true)[0] as Label;
+            l1.Text = f.Technologie;
         }
 
         private void S6_WczytajTechnologie(Screen6 obj)
@@ -283,6 +285,27 @@ namespace Recruiter
             s7.UPLoadForm7 += S7_UPLoadForm7;
             panel1.Controls.Add(s7);
             s7.BringToFront();
+            UploadControls7(panel1, Forma.Instance);
+        }
+
+        private void UploadControls7(Panel pan, Forma f)
+        {
+            TextBox t1 = pan.Parent.Controls.Find("PrefBranch", true)[0] as TextBox;
+            t1.Text = f.Prefoddzial;
+            TextBox t2 = pan.Parent.Controls.Find("PrefWorktime", true)[0] as TextBox;
+            t2.Text = f.Prefczaspracy;
+            TextBox t3 = pan.Parent.Controls.Find("PrefSalary", true)[0] as TextBox;
+            t3.Text = f.Wynagrodzenie;
+            TextBox t4 = pan.Parent.Controls.Find("CompanyKnowledge", true)[0] as TextBox;
+            t4.Text = f.Skadwiesz;
+
+            DateTimePicker dtp = pan.Parent.Controls.Find("dateTimePicker1", true)[0] as DateTimePicker;
+            DateTime parsedDate;
+            if (f.Pracaodkiedy != "")
+            {
+                DateTime.TryParseExact(f.Pracaodkiedy, "dd.MM.yyyy", null, DateTimeStyles.None, out parsedDate);
+                dtp.Value = parsedDate;
+            }
         }
 
         private void S7_UPLoadForm7(string prefstanowisko, string prefoddzial, string prefczaspracy

@@ -22,6 +22,10 @@ namespace Recruiter
         #endregion
         private void End_Click(object sender, EventArgs e)
         {
+            if (UPLoadForm8 != null)
+            {
+                UPLoadForm8(RecruiterInfo.Text, Interests.Text);
+            }
             if (StartForm9 != null)
                 StartForm9();
         }

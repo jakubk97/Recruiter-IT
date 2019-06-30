@@ -35,11 +35,12 @@
             this.Title = new System.Windows.Forms.Label();
             this.LinksLabel2 = new System.Windows.Forms.Label();
             this.LinksLabel = new System.Windows.Forms.Label();
-            this.Links = new System.Windows.Forms.RichTextBox();
             this.Prev = new System.Windows.Forms.Button();
             this.errorProvider1 = new System.Windows.Forms.ErrorProvider(this.components);
             this.comboBox1 = new System.Windows.Forms.CheckedListBox();
             this.button1 = new System.Windows.Forms.Button();
+            this.Links = new System.Windows.Forms.RichTextBox();
+            this.labelprev = new System.Windows.Forms.Label();
             ((System.ComponentModel.ISupportInitialize)(this.errorProvider1)).BeginInit();
             this.SuspendLayout();
             // 
@@ -120,17 +121,6 @@
             this.LinksLabel.Text = "Linki do twoich prac";
             this.LinksLabel.TextAlign = System.Drawing.ContentAlignment.TopCenter;
             // 
-            // Links
-            // 
-            this.Links.BackColor = System.Drawing.SystemColors.ScrollBar;
-            this.Links.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
-            this.Links.Font = new System.Drawing.Font("Segoe UI", 14F);
-            this.Links.Location = new System.Drawing.Point(49, 390);
-            this.Links.Name = "Links";
-            this.Links.Size = new System.Drawing.Size(604, 171);
-            this.Links.TabIndex = 63;
-            this.Links.Text = "";
-            // 
             // Prev
             // 
             this.Prev.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(30)))), ((int)(((byte)(80)))), ((int)(((byte)(190)))));
@@ -168,11 +158,31 @@
             this.button1.UseVisualStyleBackColor = true;
             this.button1.Click += new System.EventHandler(this.button1_Click);
             // 
+            // Links
+            // 
+            this.Links.BackColor = System.Drawing.SystemColors.ScrollBar;
+            this.Links.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
+            this.Links.Font = new System.Drawing.Font("Segoe UI", 14F);
+            this.Links.Location = new System.Drawing.Point(49, 390);
+            this.Links.Name = "Links";
+            this.Links.Size = new System.Drawing.Size(604, 171);
+            this.Links.TabIndex = 63;
+            this.Links.Text = "";
+            // 
+            // labelprev
+            // 
+            this.labelprev.AutoSize = true;
+            this.labelprev.Location = new System.Drawing.Point(678, 114);
+            this.labelprev.Name = "labelprev";
+            this.labelprev.Size = new System.Drawing.Size(0, 13);
+            this.labelprev.TabIndex = 68;
+            // 
             // Screen6
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.White;
+            this.Controls.Add(this.labelprev);
             this.Controls.Add(this.button1);
             this.Controls.Add(this.comboBox1);
             this.Controls.Add(this.Prev);
@@ -198,10 +208,11 @@
         private System.Windows.Forms.Label Title;
         private System.Windows.Forms.Label LinksLabel2;
         private System.Windows.Forms.Label LinksLabel;
-        private System.Windows.Forms.RichTextBox Links;
         private System.Windows.Forms.Button Prev;
         private System.Windows.Forms.ErrorProvider errorProvider1;
         private System.Windows.Forms.Button button1;
         private System.Windows.Forms.CheckedListBox comboBox1;
+        private System.Windows.Forms.RichTextBox Links;
+        private System.Windows.Forms.Label labelprev;
     }
 }

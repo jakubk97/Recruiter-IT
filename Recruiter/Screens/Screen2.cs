@@ -24,12 +24,20 @@ namespace Recruiter
 
         private void Next_Click(object sender, EventArgs e)
         {
-            if (UPLoadForm2 != null)
-                UPLoadForm2(FirstName.Text,SecondName.Text, Surname.Text, dateTimePickerdataurodzenia.Value.ToShortDateString()
-                    , Email.Text, Phone.Text, Address.Text, imageString);
+            if (FirstName.Text != "" && SecondName.Text != "" && Surname.Text != "" && Email.Text != "" && Phone.Text != "" &&
+                Address.Text != "" && imageString != "")
+            {
+                if (UPLoadForm2 != null)
+                    UPLoadForm2(FirstName.Text, SecondName.Text, Surname.Text, dateTimePickerdataurodzenia.Value.ToShortDateString()
+                        , Email.Text, Phone.Text, Address.Text, imageString);
 
-            if (StartForm3 != null)
-                StartForm3();
+                if (StartForm3 != null)
+                    StartForm3();
+            }
+            else
+            {
+                errorProvider1.SetError(Next, "Należy zaznaczyć przynajmniej jedno pole!");
+            }
         }
 
         private string imageString = "";

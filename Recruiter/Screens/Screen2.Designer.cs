@@ -31,7 +31,6 @@
             this.components = new System.ComponentModel.Container();
             this.Title = new System.Windows.Forms.Label();
             this.FirstName = new System.Windows.Forms.TextBox();
-            this.contextMenuStrip1 = new System.Windows.Forms.ContextMenuStrip(this.components);
             this.FirstNameLabel = new System.Windows.Forms.Label();
             this.SurnameLabel = new System.Windows.Forms.Label();
             this.Surname = new System.Windows.Forms.TextBox();
@@ -49,6 +48,8 @@
             this.sciezka = new System.Windows.Forms.Label();
             this.SecondNameLabel = new System.Windows.Forms.Label();
             this.SecondName = new System.Windows.Forms.TextBox();
+            this.errorProvider1 = new System.Windows.Forms.ErrorProvider(this.components);
+            ((System.ComponentModel.ISupportInitialize)(this.errorProvider1)).BeginInit();
             this.SuspendLayout();
             // 
             // Title
@@ -73,11 +74,6 @@
             this.FirstName.Name = "FirstName";
             this.FirstName.Size = new System.Drawing.Size(215, 32);
             this.FirstName.TabIndex = 2;
-            // 
-            // contextMenuStrip1
-            // 
-            this.contextMenuStrip1.Name = "contextMenuStrip1";
-            this.contextMenuStrip1.Size = new System.Drawing.Size(61, 4);
             // 
             // FirstNameLabel
             // 
@@ -283,6 +279,10 @@
             this.SecondName.Size = new System.Drawing.Size(215, 32);
             this.SecondName.TabIndex = 21;
             // 
+            // errorProvider1
+            // 
+            this.errorProvider1.ContainerControl = this;
+            // 
             // Screen2
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
@@ -309,6 +309,7 @@
             this.Controls.Add(this.Title);
             this.Name = "Screen2";
             this.Size = new System.Drawing.Size(1008, 729);
+            ((System.ComponentModel.ISupportInitialize)(this.errorProvider1)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -318,7 +319,6 @@
 
         private System.Windows.Forms.Label Title;
         private System.Windows.Forms.TextBox FirstName;
-        private System.Windows.Forms.ContextMenuStrip contextMenuStrip1;
         private System.Windows.Forms.Label FirstNameLabel;
         private System.Windows.Forms.Label SurnameLabel;
         private System.Windows.Forms.TextBox Surname;
@@ -336,5 +336,6 @@
         private System.Windows.Forms.Label sciezka;
         private System.Windows.Forms.Label SecondNameLabel;
         private System.Windows.Forms.TextBox SecondName;
+        private System.Windows.Forms.ErrorProvider errorProvider1;
     }
 }

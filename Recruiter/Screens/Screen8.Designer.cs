@@ -31,10 +31,10 @@
             this.End = new System.Windows.Forms.Button();
             this.RecruiterInfoLabel = new System.Windows.Forms.Label();
             this.Title = new System.Windows.Forms.Label();
-            this.RecruiterInfo = new System.Windows.Forms.RichTextBox();
             this.Interests = new System.Windows.Forms.RichTextBox();
             this.InterestsLabel = new System.Windows.Forms.Label();
             this.Prev = new System.Windows.Forms.Button();
+            this.RecruiterInfo = new System.Windows.Forms.RichTextBox();
             this.SuspendLayout();
             // 
             // End
@@ -78,17 +78,6 @@
             this.Title.Text = "Inne";
             this.Title.TextAlign = System.Drawing.ContentAlignment.TopCenter;
             // 
-            // RecruiterInfo
-            // 
-            this.RecruiterInfo.BackColor = System.Drawing.SystemColors.ScrollBar;
-            this.RecruiterInfo.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
-            this.RecruiterInfo.Font = new System.Drawing.Font("Segoe UI", 14F);
-            this.RecruiterInfo.Location = new System.Drawing.Point(49, 147);
-            this.RecruiterInfo.Name = "RecruiterInfo";
-            this.RecruiterInfo.Size = new System.Drawing.Size(521, 149);
-            this.RecruiterInfo.TabIndex = 64;
-            this.RecruiterInfo.Text = "";
-            // 
             // Interests
             // 
             this.Interests.BackColor = System.Drawing.SystemColors.ScrollBar;
@@ -128,6 +117,17 @@
             this.Prev.UseVisualStyleBackColor = false;
             this.Prev.Click += new System.EventHandler(this.Prev_Click);
             // 
+            // RecruiterInfo
+            // 
+            this.RecruiterInfo.BackColor = System.Drawing.SystemColors.ScrollBar;
+            this.RecruiterInfo.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
+            this.RecruiterInfo.Font = new System.Drawing.Font("Segoe UI", 14F);
+            this.RecruiterInfo.Location = new System.Drawing.Point(49, 147);
+            this.RecruiterInfo.Name = "RecruiterInfo";
+            this.RecruiterInfo.Size = new System.Drawing.Size(521, 149);
+            this.RecruiterInfo.TabIndex = 64;
+            this.RecruiterInfo.Text = "";
+            // 
             // Screen8
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
@@ -152,9 +152,9 @@
         private System.Windows.Forms.Button End;
         private System.Windows.Forms.Label RecruiterInfoLabel;
         private System.Windows.Forms.Label Title;
-        private System.Windows.Forms.RichTextBox RecruiterInfo;
         private System.Windows.Forms.RichTextBox Interests;
         private System.Windows.Forms.Label InterestsLabel;
         private System.Windows.Forms.Button Prev;
+        private System.Windows.Forms.RichTextBox RecruiterInfo;
     }
 }

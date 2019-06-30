@@ -15,6 +15,7 @@ namespace Recruiter
         {
             InitializeComponent();
             comboBoxPosition.DataSource = Positions();
+            comboBoxPosition.Text = "";
         }
         #region Events
         public event Action StartForm6;
@@ -29,14 +30,38 @@ namespace Recruiter
         }
         private void Next_Click(object sender, EventArgs e)
         {
-            if (StartForm8 != null)
-                StartForm8();
+            if (comboBoxPosition.SelectedIndex != -1 && PrefBranch.Text != "" && PrefWorktime.Text != "" &&
+                PrefSalary.Text !="" && CompanyKnowledge.Text !="")
+            {
+                errorProvider1.Clear();
+                if (UPLoadForm7 != null)
+                {
+                    UPLoadForm7(comboBoxPosition.SelectedItem.ToString(), PrefBranch.Text, PrefWorktime.Text, PrefSalary.Text,
+                        dateTimePicker1.Value.ToShortDateString(), CompanyKnowledge.Text);
+                }
+                if (StartForm8 != null)
+                    StartForm8();
+            }
+            else
+            {
+                errorProvider1.SetError(Next, "Należy wypełnić wszystkie pola!");
+            }
         }
 
         private void Prev_Click(object sender, EventArgs e)
         {
             if (StartForm6 != null)
                 StartForm6();
+        }
+
+        private void PrefWorktime_KeyPress(object sender, KeyPressEventArgs e)
+        {
+            e.Handled = !char.IsDigit(e.KeyChar) && !char.IsControl(e.KeyChar);
+        }
+
+        private void PrefSalary_KeyPress(object sender, KeyPressEventArgs e)
+        {
+            e.Handled = !char.IsDigit(e.KeyChar) && !char.IsControl(e.KeyChar);
         }
     }
 }
