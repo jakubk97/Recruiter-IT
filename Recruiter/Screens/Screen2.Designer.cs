@@ -169,6 +169,7 @@
             this.Phone.Name = "Phone";
             this.Phone.Size = new System.Drawing.Size(215, 32);
             this.Phone.TabIndex = 10;
+            this.Phone.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.Phone_KeyPress);
             // 
             // AddressLabel
             // 

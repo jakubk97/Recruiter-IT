@@ -40,7 +40,7 @@ namespace Recruiter
         public event Action GetTechnologie;
 
         public event Action<string, string, string, string, string, string, string, string> UPLoadForm2;
-        public event Action<string, string, string, string, string, string> UPLoadForm3;
+        public event Action<string, string, string, string> UPLoadForm3;
         public event Action<string> UPLoadForm4;
         public event Action<string, string, string, string> UPLoadForm5;
         public event Action<string, string> UPLoadForm6;
@@ -126,20 +126,6 @@ namespace Recruiter
             t3.SelectedItem = f.Trybstudiow;
             ComboBox t4 = pan.Parent.Controls.Find("WorkTitle", true)[0] as ComboBox;
             t4.SelectedItem = f.Tytzawodowy;
-            DateTimePicker dtp = pan.Parent.Controls.Find("dateTimePicker1", true)[0] as DateTimePicker;
-            DateTime parsedDate;
-            if (f.D_roz_studiow != "")
-            {
-                DateTime.TryParseExact(f.D_roz_studiow, "dd.MM.yyyy", null, DateTimeStyles.None, out parsedDate);
-                dtp.Value = parsedDate;
-            }
-            DateTimePicker dtp2 = pan.Parent.Controls.Find("dateTimePicker2", true)[0] as DateTimePicker;
-            DateTime parsedDate2;
-            if (f.D_zak_studiow != "")
-            {
-                DateTime.TryParseExact(f.D_zak_studiow, "dd.MM.yyyy", null, DateTimeStyles.None, out parsedDate);
-                dtp.Value = parsedDate;
-            }
         }
 
 
@@ -170,11 +156,11 @@ namespace Recruiter
         }
 
         private void S3_UPLoadForm3(string nazwauczelni, string kierunek
-            , string trybstudiow, string tytzawodowy, string d_roz_studiow, string d_zak_studiow)
+            , string trybstudiow, string tytzawodowy)
         {
             if (UPLoadForm3 != null)
                 UPLoadForm3(nazwauczelni, kierunek
-            , trybstudiow, tytzawodowy, d_roz_studiow, d_zak_studiow);
+            , trybstudiow, tytzawodowy);
         }
 
         private void S3_StartForm4()

@@ -27,7 +27,7 @@ namespace Recruiter
         public event Action<Screen3> WczytajUczelnie;
         public event Action<Screen3> WczytajKierunki;
 
-        public event Action<string, string, string, string, string, string> UPLoadForm3;
+        public event Action<string, string, string, string> UPLoadForm3;
         #endregion
 
         private string[] TS()
@@ -70,8 +70,7 @@ namespace Recruiter
                 errorProvider1.Clear();
                 if (UPLoadForm3 != null)
                     UPLoadForm3(CollageName.SelectedItem.ToString(), CollageKier.SelectedItem.ToString(),
-                        Mode.SelectedItem.ToString(), WorkTitle.SelectedItem.ToString(),
-                        dateTimePicker1.Value.ToShortDateString(), dateTimePicker2.Value.ToShortDateString());
+                        Mode.SelectedItem.ToString(), WorkTitle.SelectedItem.ToString());
 
                 if (StartForm4 != null)
                     StartForm4();

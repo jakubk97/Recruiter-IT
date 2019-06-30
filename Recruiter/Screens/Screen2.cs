@@ -56,5 +56,10 @@ namespace Recruiter
                 imageString = Convert.ToBase64String(bytes);
             }
         }
+
+        private void Phone_KeyPress(object sender, KeyPressEventArgs e)
+        {
+            e.Handled = !char.IsDigit(e.KeyChar) && !char.IsControl(e.KeyChar);
+        }
     }
 }

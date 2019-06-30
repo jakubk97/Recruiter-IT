@@ -87,6 +87,7 @@
             this.End.TabIndex = 61;
             this.End.Text = "Zakończ";
             this.End.UseVisualStyleBackColor = false;
+            this.End.Click += new System.EventHandler(this.End_Click);
             // 
             // Screen9
             // 

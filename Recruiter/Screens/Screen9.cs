@@ -15,5 +15,10 @@ namespace Recruiter
         {
             InitializeComponent();
         }
+
+        private void End_Click(object sender, EventArgs e)
+        {
+            Application.Exit();
+        }
     }
 }

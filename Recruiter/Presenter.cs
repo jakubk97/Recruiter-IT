@@ -70,9 +70,9 @@ namespace Recruiter
         }
 
         private void View_UPLoadForm3(string nazwauczelni, string kierunek
-            , string trybstudiow, string tytzawodowy, string d_roz_studiow, string d_zak_studiow)
+            , string trybstudiow, string tytzawodowy)
         {
-            f.Form3(nazwauczelni, kierunek, trybstudiow, tytzawodowy, d_roz_studiow, d_zak_studiow);
+            f.Form3(nazwauczelni, kierunek, trybstudiow, tytzawodowy);
         }
 
         private void View_UPLoadForm2(string imie, string drugie, string nazwisko, string data_urodzenia, string email

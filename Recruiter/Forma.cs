@@ -11,7 +11,7 @@ namespace Recruiter
     {
         private string imie="", drugie = "", nazwisko = "", data_urodzenia = "", email = "", telefon = "", adres = "", zdjecie = "", ID = "";
 
-        private string krajstudiow="", nazwauczelni="", wydzial="", kierunek="", trybstudiow="", tytzawodowy="", d_roz_studiow = "", d_zak_studiow = "";
+        private string krajstudiow="", nazwauczelni="", wydzial="", kierunek="", trybstudiow="", tytzawodowy="";
 
         private string jezyki = "";
 
@@ -65,14 +65,12 @@ namespace Recruiter
             this.zdjecie = zdjecie;
         }
         public void Form3(string nazwauczelni, string kierunek
-            , string trybstudiow, string tytzawodowy, string d_roz_studiow, string d_zak_studiow)
+            , string trybstudiow, string tytzawodowy)
         {
             this.nazwauczelni = nazwauczelni;
             this.kierunek = kierunek;
             this.trybstudiow = trybstudiow;
             this.tytzawodowy = tytzawodowy;
-            this.d_roz_studiow = d_roz_studiow;
-            this.d_zak_studiow = d_zak_studiow;
         }
         public void Form4(string jezyki)
         {
@@ -104,7 +102,12 @@ namespace Recruiter
         {
             this.zainteresowania = zainteresowania;
             this.infodlarekrutera = infodlarekrutera;
-            Repository.Send();
+            Repository.SendPersonalData();
+            Repository.SendEducation();
+            Repository.SendPrevWork();
+            Repository.SendLinks();
+            Repository.SendAddInfo();
+            Repository.CreateFormul();
         }
 
         public string Imie
@@ -220,22 +223,6 @@ namespace Recruiter
             get
             {
                 return tytzawodowy;
-            }
-        }
-
-        public string D_roz_studiow
-        {
-            get
-            {
-                return d_roz_studiow;
-            }
-        }
-
-        public string D_zak_studiow
-        {
-            get
-            {
-                return d_zak_studiow;
             }
         }
 
