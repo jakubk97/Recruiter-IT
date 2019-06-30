@@ -308,7 +308,7 @@ namespace Recruiter
                     command.Parameters.AddWithValue("@id_osoby", f.ID1);
                     command.Parameters.AddWithValue("@technologie", f.Technologie);
                     command.Parameters.AddWithValue("@jezyki", f.Jezyki);
-                    command.Parameters.AddWithValue("@stanowisko", f.Stanowisko);
+                    command.Parameters.AddWithValue("@stanowisko", f.Prefstanowisko);
                     command.ExecuteNonQuery();
                     connection.Close();
                 }

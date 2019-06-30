@@ -47,10 +47,10 @@ namespace Recruiter
             f.Form8(zainteresowania, infodlarekrutera);
         }
 
-        private void View_UPLoadForm7(string prefstanowisko, string prefoddzial, string prefczaspracy
+        private void View_UPLoadForm7(string prefstanowisko, string prefczaspracy
             , string wynagrodzenie, string pracaodkiedy, string skadwiesz)
         {
-            f.Form7(prefstanowisko, prefoddzial, prefczaspracy
+            f.Form7(prefstanowisko, prefczaspracy
             , wynagrodzenie, pracaodkiedy, skadwiesz);
         }
 

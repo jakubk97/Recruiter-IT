@@ -20,7 +20,7 @@ namespace Recruiter
         #region Events
         public event Action StartForm6;
         public event Action StartForm8;
-        public event Action<string, string, string, string, string, string> UPLoadForm7;
+        public event Action<string, string, string, string, string> UPLoadForm7;
         #endregion
 
         private string[] Positions()
@@ -30,13 +30,13 @@ namespace Recruiter
         }
         private void Next_Click(object sender, EventArgs e)
         {
-            if (comboBoxPosition.SelectedIndex != -1 && PrefBranch.Text != "" && PrefWorktime.Text != "" &&
+            if (comboBoxPosition.SelectedIndex != -1 && PrefWorktime.Text != "" &&
                 PrefSalary.Text !="" && CompanyKnowledge.Text !="")
             {
                 errorProvider1.Clear();
                 if (UPLoadForm7 != null)
                 {
-                    UPLoadForm7(comboBoxPosition.SelectedItem.ToString(), PrefBranch.Text, PrefWorktime.Text, PrefSalary.Text,
+                    UPLoadForm7(comboBoxPosition.SelectedItem.ToString(), PrefWorktime.Text, PrefSalary.Text,
                         dateTimePicker1.Value.ToShortDateString(), CompanyKnowledge.Text);
                 }
                 if (StartForm8 != null)

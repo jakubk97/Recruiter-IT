@@ -37,8 +37,6 @@
             this.PrefSalary = new System.Windows.Forms.TextBox();
             this.PrefWorktimeLabel = new System.Windows.Forms.Label();
             this.PrefWorktime = new System.Windows.Forms.TextBox();
-            this.PrefBranchLabel = new System.Windows.Forms.Label();
-            this.PrefBranch = new System.Windows.Forms.TextBox();
             this.Title = new System.Windows.Forms.Label();
             this.Prev = new System.Windows.Forms.Button();
             this.label1 = new System.Windows.Forms.Label();
@@ -68,7 +66,7 @@
             this.CompanyKnowledgeLabel.AutoSize = true;
             this.CompanyKnowledgeLabel.Font = new System.Drawing.Font("Segoe UI", 16F);
             this.CompanyKnowledgeLabel.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(30)))), ((int)(((byte)(80)))), ((int)(((byte)(190)))));
-            this.CompanyKnowledgeLabel.Location = new System.Drawing.Point(44, 441);
+            this.CompanyKnowledgeLabel.Location = new System.Drawing.Point(44, 374);
             this.CompanyKnowledgeLabel.Margin = new System.Windows.Forms.Padding(0);
             this.CompanyKnowledgeLabel.Name = "CompanyKnowledgeLabel";
             this.CompanyKnowledgeLabel.Size = new System.Drawing.Size(209, 30);
@@ -81,9 +79,9 @@
             this.CompanyKnowledge.BackColor = System.Drawing.SystemColors.ScrollBar;
             this.CompanyKnowledge.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
             this.CompanyKnowledge.Font = new System.Drawing.Font("Segoe UI", 14F);
-            this.CompanyKnowledge.Location = new System.Drawing.Point(368, 443);
+            this.CompanyKnowledge.Location = new System.Drawing.Point(368, 376);
             this.CompanyKnowledge.Name = "CompanyKnowledge";
-            this.CompanyKnowledge.Size = new System.Drawing.Size(215, 32);
+            this.CompanyKnowledge.Size = new System.Drawing.Size(412, 32);
             this.CompanyKnowledge.TabIndex = 30;
             // 
             // PrefStartDateLabel
@@ -91,7 +89,7 @@
             this.PrefStartDateLabel.AutoSize = true;
             this.PrefStartDateLabel.Font = new System.Drawing.Font("Segoe UI", 16F);
             this.PrefStartDateLabel.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(30)))), ((int)(((byte)(80)))), ((int)(((byte)(190)))));
-            this.PrefStartDateLabel.Location = new System.Drawing.Point(44, 380);
+            this.PrefStartDateLabel.Location = new System.Drawing.Point(44, 313);
             this.PrefStartDateLabel.Margin = new System.Windows.Forms.Padding(0);
             this.PrefStartDateLabel.Name = "PrefStartDateLabel";
             this.PrefStartDateLabel.Size = new System.Drawing.Size(260, 30);
@@ -104,7 +102,7 @@
             this.PrefSalaryLabel.AutoSize = true;
             this.PrefSalaryLabel.Font = new System.Drawing.Font("Segoe UI", 16F);
             this.PrefSalaryLabel.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(30)))), ((int)(((byte)(80)))), ((int)(((byte)(190)))));
-            this.PrefSalaryLabel.Location = new System.Drawing.Point(44, 319);
+            this.PrefSalaryLabel.Location = new System.Drawing.Point(44, 252);
             this.PrefSalaryLabel.Margin = new System.Windows.Forms.Padding(0);
             this.PrefSalaryLabel.Name = "PrefSalaryLabel";
             this.PrefSalaryLabel.Size = new System.Drawing.Size(319, 30);
@@ -117,7 +115,7 @@
             this.PrefSalary.BackColor = System.Drawing.SystemColors.ScrollBar;
             this.PrefSalary.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
             this.PrefSalary.Font = new System.Drawing.Font("Segoe UI", 14F);
-            this.PrefSalary.Location = new System.Drawing.Point(368, 321);
+            this.PrefSalary.Location = new System.Drawing.Point(368, 254);
             this.PrefSalary.Name = "PrefSalary";
             this.PrefSalary.Size = new System.Drawing.Size(215, 32);
             this.PrefSalary.TabIndex = 26;
@@ -128,7 +126,7 @@
             this.PrefWorktimeLabel.AutoSize = true;
             this.PrefWorktimeLabel.Font = new System.Drawing.Font("Segoe UI", 16F);
             this.PrefWorktimeLabel.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(30)))), ((int)(((byte)(80)))), ((int)(((byte)(190)))));
-            this.PrefWorktimeLabel.Location = new System.Drawing.Point(44, 258);
+            this.PrefWorktimeLabel.Location = new System.Drawing.Point(44, 191);
             this.PrefWorktimeLabel.Margin = new System.Windows.Forms.Padding(0);
             this.PrefWorktimeLabel.Name = "PrefWorktimeLabel";
             this.PrefWorktimeLabel.Size = new System.Drawing.Size(240, 30);
@@ -142,34 +140,11 @@
             this.PrefWorktime.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
             this.PrefWorktime.Cursor = System.Windows.Forms.Cursors.Default;
             this.PrefWorktime.Font = new System.Drawing.Font("Segoe UI", 14F);
-            this.PrefWorktime.Location = new System.Drawing.Point(368, 260);
+            this.PrefWorktime.Location = new System.Drawing.Point(368, 193);
             this.PrefWorktime.Name = "PrefWorktime";
             this.PrefWorktime.Size = new System.Drawing.Size(215, 32);
             this.PrefWorktime.TabIndex = 24;
             this.PrefWorktime.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.PrefWorktime_KeyPress);
-            // 
-            // PrefBranchLabel
-            // 
-            this.PrefBranchLabel.AutoSize = true;
-            this.PrefBranchLabel.Font = new System.Drawing.Font("Segoe UI", 16F);
-            this.PrefBranchLabel.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(30)))), ((int)(((byte)(80)))), ((int)(((byte)(190)))));
-            this.PrefBranchLabel.Location = new System.Drawing.Point(44, 197);
-            this.PrefBranchLabel.Margin = new System.Windows.Forms.Padding(0);
-            this.PrefBranchLabel.Name = "PrefBranchLabel";
-            this.PrefBranchLabel.Size = new System.Drawing.Size(268, 30);
-            this.PrefBranchLabel.TabIndex = 23;
-            this.PrefBranchLabel.Text = "Preferowany oddział firmy";
-            this.PrefBranchLabel.TextAlign = System.Drawing.ContentAlignment.TopCenter;
-            // 
-            // PrefBranch
-            // 
-            this.PrefBranch.BackColor = System.Drawing.SystemColors.ScrollBar;
-            this.PrefBranch.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
-            this.PrefBranch.Font = new System.Drawing.Font("Segoe UI", 14F);
-            this.PrefBranch.Location = new System.Drawing.Point(368, 199);
-            this.PrefBranch.Name = "PrefBranch";
-            this.PrefBranch.Size = new System.Drawing.Size(215, 32);
-            this.PrefBranch.TabIndex = 22;
             // 
             // Title
             // 
@@ -231,7 +206,7 @@
             this.dateTimePicker1.CalendarMonthBackground = System.Drawing.SystemColors.ScrollBar;
             this.dateTimePicker1.CustomFormat = "dd-MM-yyyy";
             this.dateTimePicker1.Font = new System.Drawing.Font("Microsoft Sans Serif", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(238)));
-            this.dateTimePicker1.Location = new System.Drawing.Point(368, 381);
+            this.dateTimePicker1.Location = new System.Drawing.Point(368, 314);
             this.dateTimePicker1.MinDate = new System.DateTime(1900, 1, 1, 0, 0, 0, 0);
             this.dateTimePicker1.Name = "dateTimePicker1";
             this.dateTimePicker1.Size = new System.Drawing.Size(412, 29);
@@ -255,8 +230,6 @@
             this.Controls.Add(this.PrefSalary);
             this.Controls.Add(this.PrefWorktimeLabel);
             this.Controls.Add(this.PrefWorktime);
-            this.Controls.Add(this.PrefBranchLabel);
-            this.Controls.Add(this.PrefBranch);
             this.Controls.Add(this.Title);
             this.Name = "Screen7";
             this.Size = new System.Drawing.Size(1007, 725);
@@ -276,8 +249,6 @@
         private System.Windows.Forms.TextBox PrefSalary;
         private System.Windows.Forms.Label PrefWorktimeLabel;
         private System.Windows.Forms.TextBox PrefWorktime;
-        private System.Windows.Forms.Label PrefBranchLabel;
-        private System.Windows.Forms.TextBox PrefBranch;
         private System.Windows.Forms.Label Title;
         private System.Windows.Forms.Button Prev;
         private System.Windows.Forms.Label label1;

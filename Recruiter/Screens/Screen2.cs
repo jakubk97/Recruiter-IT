@@ -36,7 +36,7 @@ namespace Recruiter
             }
             else
             {
-                errorProvider1.SetError(Next, "Należy zaznaczyć przynajmniej jedno pole!");
+                errorProvider1.SetError(Next, "Należy wypełnić wszystkie pola!");
             }
         }
 

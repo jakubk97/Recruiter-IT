@@ -44,7 +44,7 @@ namespace Recruiter
         public event Action<string> UPLoadForm4;
         public event Action<string, string, string, string> UPLoadForm5;
         public event Action<string, string> UPLoadForm6;
-        public event Action<string, string, string, string, string, string> UPLoadForm7;
+        public event Action<string, string, string, string, string> UPLoadForm7;
         public event Action<string, string> UPLoadForm8;
 
 
@@ -276,8 +276,6 @@ namespace Recruiter
 
         private void UploadControls7(Panel pan, Forma f)
         {
-            TextBox t1 = pan.Parent.Controls.Find("PrefBranch", true)[0] as TextBox;
-            t1.Text = f.Prefoddzial;
             TextBox t2 = pan.Parent.Controls.Find("PrefWorktime", true)[0] as TextBox;
             t2.Text = f.Prefczaspracy;
             TextBox t3 = pan.Parent.Controls.Find("PrefSalary", true)[0] as TextBox;
@@ -294,11 +292,11 @@ namespace Recruiter
             }
         }
 
-        private void S7_UPLoadForm7(string prefstanowisko, string prefoddzial, string prefczaspracy
+        private void S7_UPLoadForm7(string prefstanowisko, string prefczaspracy
             , string wynagrodzenie, string pracaodkiedy, string skadwiesz)
         {
             if (UPLoadForm7 != null)
-                UPLoadForm7(prefstanowisko, prefoddzial, prefczaspracy, wynagrodzenie, pracaodkiedy, skadwiesz);
+                UPLoadForm7(prefstanowisko, prefczaspracy, wynagrodzenie, pracaodkiedy, skadwiesz);
         }
 
         private void S7_StartForm8()

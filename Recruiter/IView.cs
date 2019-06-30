@@ -32,7 +32,7 @@ namespace Recruiter
         event Action<string> UPLoadForm4;
         event Action<string, string, string, string> UPLoadForm5;
         event Action<string, string> UPLoadForm6;
-        event Action<string, string, string, string, string, string> UPLoadForm7;
+        event Action<string, string, string, string, string> UPLoadForm7;
         event Action<string, string> UPLoadForm8;
         #endregion
     }

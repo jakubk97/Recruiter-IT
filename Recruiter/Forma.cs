@@ -19,7 +19,7 @@ namespace Recruiter
 
         private string technologie="", linki="";
 
-        private string prefstanowisko="", prefoddzial="", prefczaspracy="", wynagrodzenie="", pracaodkiedy="", skadwiesz = "";
+        private string prefstanowisko="", prefczaspracy="", wynagrodzenie="", pracaodkiedy="", skadwiesz = "";
 
         private string zainteresowania="", infodlarekrutera = "";
 
@@ -88,11 +88,10 @@ namespace Recruiter
             this.technologie = technologie;
             this.linki = linki;
         }
-        public void Form7(string prefstanowisko, string prefoddzial, string prefczaspracy
+        public void Form7(string prefstanowisko, string prefczaspracy
             , string wynagrodzenie, string pracaodkiedy, string skadwiesz)
         {
             this.prefstanowisko = prefstanowisko;
-            this.prefoddzial = prefoddzial;
             this.prefczaspracy = prefczaspracy;
             this.wynagrodzenie = wynagrodzenie;
             this.pracaodkiedy = pracaodkiedy;
@@ -271,14 +270,6 @@ namespace Recruiter
             get
             {
                 return prefstanowisko;
-            }
-        }
-
-        public string Prefoddzial
-        {
-            get
-            {
-                return prefoddzial;
             }
         }
 
