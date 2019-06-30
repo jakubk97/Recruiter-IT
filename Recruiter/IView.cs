@@ -28,7 +28,7 @@ namespace Recruiter
         event Action StartForm9;
 
         event Action<string, string, string, string, string, string, string, string> UPLoadForm2;
-        event Action<string, string, string, string, string, string, string, string> UPLoadForm3;
+        event Action<string, string, string, string, string, string> UPLoadForm3;
         event Action<string> UPLoadForm4;
         event Action<string, string, string, string> UPLoadForm5;
         event Action<string, string> UPLoadForm6;

@@ -10,12 +10,10 @@ namespace Recruiter
     {
         IView view;
         Forma f;
-        Repository r;
         public Presenter(IView view, Forma f)
         {
             this.f = f;
             this.view = view;
-            r = new Repository();
             view.UPLoadForm2 += View_UPLoadForm2;
             view.UPLoadForm3 += View_UPLoadForm3;
             view.UPLoadForm4 += View_UPLoadForm4;
@@ -47,7 +45,7 @@ namespace Recruiter
         private void View_UPLoadForm8(string zainteresowania, string infodlarekrutera)
         {
             f.Form8(zainteresowania, infodlarekrutera);
-            r.F8(zainteresowania, infodlarekrutera);
+            //r.F8(zainteresowania, infodlarekrutera);
         }
 
         private void View_UPLoadForm7(string prefstanowisko, string prefoddzial, string prefczaspracy
@@ -55,40 +53,40 @@ namespace Recruiter
         {
             f.Form7(prefstanowisko, prefoddzial, prefczaspracy
             , wynagrodzenie, pracaodkiedy, skadwiesz);
-            r.F7(prefstanowisko, prefoddzial, prefczaspracy
-            , wynagrodzenie, pracaodkiedy, skadwiesz);
+            //r.F7(prefstanowisko, prefoddzial, prefczaspracy
+            //, wynagrodzenie, pracaodkiedy, skadwiesz);
         }
 
         private void View_UPLoadForm6(string technologie, string linki)
         {
             f.Form6(technologie, linki);
-            r.F6(technologie, linki);
+            //r.F6(technologie, linki);
         }
 
         private void View_UPLoadForm5(string nazwa, string stanowisko, string data_od, string data_do)
         {
             f.Form5(nazwa, stanowisko, data_od, data_do);
-            r.F5(nazwa, stanowisko, data_od, data_do);
+            //r.F5(nazwa, stanowisko, data_od, data_do);
         }
 
         private void View_UPLoadForm4(string jezyki)
         {
             f.Form4(jezyki);
-            r.F4(jezyki);
+            //r.F4(jezyki);
         }
 
-        private void View_UPLoadForm3(string krajstudiow, string nazwauczelni, string wydzial, string kierunek
+        private void View_UPLoadForm3(string nazwauczelni, string kierunek
             , string trybstudiow, string tytzawodowy, string d_roz_studiow, string d_zak_studiow)
         {
-            f.Form3(krajstudiow, nazwauczelni, wydzial, kierunek, trybstudiow, tytzawodowy, d_roz_studiow, d_zak_studiow);
-            r.F3(krajstudiow, nazwauczelni, wydzial, kierunek, trybstudiow, tytzawodowy, d_roz_studiow, d_zak_studiow);
+            f.Form3(nazwauczelni, kierunek, trybstudiow, tytzawodowy, d_roz_studiow, d_zak_studiow);
+            //r.F3(krajstudiow, nazwauczelni, wydzial, kierunek, trybstudiow, tytzawodowy, d_roz_studiow, d_zak_studiow);
         }
 
         private void View_UPLoadForm2(string imie, string drugie, string nazwisko, string data_urodzenia, string email
             , string telefon, string adres, string zdjecie)
         {
             f.Form2(imie, drugie, nazwisko, data_urodzenia, email, telefon, adres, zdjecie);
-            r.F2(imie, drugie, nazwisko, data_urodzenia, email, telefon, adres, zdjecie);
+            //r.F2(imie, drugie, nazwisko, data_urodzenia, email, telefon, adres, zdjecie);
         }
     }
 }

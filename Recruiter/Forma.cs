@@ -64,12 +64,10 @@ namespace Recruiter
             this.adres = adres;
             this.zdjecie = zdjecie;
         }
-        public void Form3(string krajstudiow, string nazwauczelni, string wydzial, string kierunek
+        public void Form3(string nazwauczelni, string kierunek
             , string trybstudiow, string tytzawodowy, string d_roz_studiow, string d_zak_studiow)
         {
-            this.krajstudiow = krajstudiow;
             this.nazwauczelni = nazwauczelni;
-            this.wydzial = wydzial;
             this.kierunek = kierunek;
             this.trybstudiow = trybstudiow;
             this.tytzawodowy = tytzawodowy;

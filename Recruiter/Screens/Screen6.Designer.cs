@@ -28,16 +28,19 @@
         /// </summary>
         private void InitializeComponent()
         {
+            this.components = new System.ComponentModel.Container();
             this.Next = new System.Windows.Forms.Button();
             this.Specialization = new System.Windows.Forms.TextBox();
             this.KnownTechLabel = new System.Windows.Forms.Label();
             this.Title = new System.Windows.Forms.Label();
-            this.KnownTechLabel2 = new System.Windows.Forms.Label();
             this.LinksLabel2 = new System.Windows.Forms.Label();
             this.LinksLabel = new System.Windows.Forms.Label();
             this.Links = new System.Windows.Forms.RichTextBox();
             this.Prev = new System.Windows.Forms.Button();
-            this.comboBox1 = new System.Windows.Forms.ComboBox();
+            this.errorProvider1 = new System.Windows.Forms.ErrorProvider(this.components);
+            this.comboBox1 = new System.Windows.Forms.CheckedListBox();
+            this.button1 = new System.Windows.Forms.Button();
+            ((System.ComponentModel.ISupportInitialize)(this.errorProvider1)).BeginInit();
             this.SuspendLayout();
             // 
             // Next
@@ -90,27 +93,13 @@
             this.Title.Text = "Technologie";
             this.Title.TextAlign = System.Drawing.ContentAlignment.TopCenter;
             // 
-            // KnownTechLabel2
-            // 
-            this.KnownTechLabel2.AutoSize = true;
-            this.KnownTechLabel2.BackColor = System.Drawing.Color.White;
-            this.KnownTechLabel2.Font = new System.Drawing.Font("Segoe UI", 8F);
-            this.KnownTechLabel2.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(30)))), ((int)(((byte)(80)))), ((int)(((byte)(190)))));
-            this.KnownTechLabel2.Location = new System.Drawing.Point(54, 144);
-            this.KnownTechLabel2.Margin = new System.Windows.Forms.Padding(0);
-            this.KnownTechLabel2.Name = "KnownTechLabel2";
-            this.KnownTechLabel2.Size = new System.Drawing.Size(210, 13);
-            this.KnownTechLabel2.TabIndex = 59;
-            this.KnownTechLabel2.Text = "Kolejne technologie oddziel średnikiem";
-            this.KnownTechLabel2.TextAlign = System.Drawing.ContentAlignment.TopCenter;
-            // 
             // LinksLabel2
             // 
             this.LinksLabel2.AutoSize = true;
             this.LinksLabel2.BackColor = System.Drawing.Color.White;
             this.LinksLabel2.Font = new System.Drawing.Font("Segoe UI", 8F);
             this.LinksLabel2.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(30)))), ((int)(((byte)(80)))), ((int)(((byte)(190)))));
-            this.LinksLabel2.Location = new System.Drawing.Point(54, 218);
+            this.LinksLabel2.Location = new System.Drawing.Point(54, 374);
             this.LinksLabel2.Margin = new System.Windows.Forms.Padding(0);
             this.LinksLabel2.Name = "LinksLabel2";
             this.LinksLabel2.Size = new System.Drawing.Size(156, 13);
@@ -123,7 +112,7 @@
             this.LinksLabel.AutoSize = true;
             this.LinksLabel.Font = new System.Drawing.Font("Segoe UI", 16F);
             this.LinksLabel.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(30)))), ((int)(((byte)(80)))), ((int)(((byte)(190)))));
-            this.LinksLabel.Location = new System.Drawing.Point(44, 188);
+            this.LinksLabel.Location = new System.Drawing.Point(44, 344);
             this.LinksLabel.Margin = new System.Windows.Forms.Padding(0);
             this.LinksLabel.Name = "LinksLabel";
             this.LinksLabel.Size = new System.Drawing.Size(205, 30);
@@ -136,7 +125,7 @@
             this.Links.BackColor = System.Drawing.SystemColors.ScrollBar;
             this.Links.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
             this.Links.Font = new System.Drawing.Font("Segoe UI", 14F);
-            this.Links.Location = new System.Drawing.Point(49, 234);
+            this.Links.Location = new System.Drawing.Point(49, 390);
             this.Links.Name = "Links";
             this.Links.Size = new System.Drawing.Size(604, 171);
             this.Links.TabIndex = 63;
@@ -157,34 +146,46 @@
             this.Prev.UseVisualStyleBackColor = false;
             this.Prev.Click += new System.EventHandler(this.Prev_Click);
             // 
+            // errorProvider1
+            // 
+            this.errorProvider1.ContainerControl = this;
+            // 
             // comboBox1
             // 
-            this.comboBox1.BackColor = System.Drawing.SystemColors.ScrollBar;
-            this.comboBox1.Font = new System.Drawing.Font("Microsoft Sans Serif", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(238)));
             this.comboBox1.FormattingEnabled = true;
-            this.comboBox1.Location = new System.Drawing.Point(369, 116);
+            this.comboBox1.Location = new System.Drawing.Point(339, 114);
             this.comboBox1.Name = "comboBox1";
-            this.comboBox1.Size = new System.Drawing.Size(284, 32);
-            this.comboBox1.TabIndex = 65;
-            this.comboBox1.DropDown += new System.EventHandler(this.comboBox1_DropDown);
+            this.comboBox1.Size = new System.Drawing.Size(314, 229);
+            this.comboBox1.TabIndex = 66;
+            // 
+            // button1
+            // 
+            this.button1.Location = new System.Drawing.Point(219, 147);
+            this.button1.Name = "button1";
+            this.button1.Size = new System.Drawing.Size(75, 23);
+            this.button1.TabIndex = 67;
+            this.button1.Text = "wczytaj";
+            this.button1.UseVisualStyleBackColor = true;
+            this.button1.Click += new System.EventHandler(this.button1_Click);
             // 
             // Screen6
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.White;
+            this.Controls.Add(this.button1);
             this.Controls.Add(this.comboBox1);
             this.Controls.Add(this.Prev);
             this.Controls.Add(this.Links);
             this.Controls.Add(this.LinksLabel2);
             this.Controls.Add(this.LinksLabel);
-            this.Controls.Add(this.KnownTechLabel2);
             this.Controls.Add(this.Next);
             this.Controls.Add(this.Specialization);
             this.Controls.Add(this.KnownTechLabel);
             this.Controls.Add(this.Title);
             this.Name = "Screen6";
             this.Size = new System.Drawing.Size(1007, 725);
+            ((System.ComponentModel.ISupportInitialize)(this.errorProvider1)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -195,11 +196,12 @@
         private System.Windows.Forms.TextBox Specialization;
         private System.Windows.Forms.Label KnownTechLabel;
         private System.Windows.Forms.Label Title;
-        private System.Windows.Forms.Label KnownTechLabel2;
         private System.Windows.Forms.Label LinksLabel2;
         private System.Windows.Forms.Label LinksLabel;
         private System.Windows.Forms.RichTextBox Links;
         private System.Windows.Forms.Button Prev;
-        private System.Windows.Forms.ComboBox comboBox1;
+        private System.Windows.Forms.ErrorProvider errorProvider1;
+        private System.Windows.Forms.Button button1;
+        private System.Windows.Forms.CheckedListBox comboBox1;
     }
 }

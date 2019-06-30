@@ -28,10 +28,14 @@
         /// </summary>
         private void InitializeComponent()
         {
+            this.components = new System.ComponentModel.Container();
             this.Next = new System.Windows.Forms.Button();
             this.Title = new System.Windows.Forms.Label();
             this.Prev = new System.Windows.Forms.Button();
             this.CBL_Language = new System.Windows.Forms.CheckedListBox();
+            this.labelLanguage = new System.Windows.Forms.Label();
+            this.errorProvider1 = new System.Windows.Forms.ErrorProvider(this.components);
+            ((System.ComponentModel.ISupportInitialize)(this.errorProvider1)).BeginInit();
             this.SuspendLayout();
             // 
             // Next
@@ -89,11 +93,24 @@
             this.CBL_Language.Size = new System.Drawing.Size(646, 244);
             this.CBL_Language.TabIndex = 50;
             // 
+            // labelLanguage
+            // 
+            this.labelLanguage.AutoSize = true;
+            this.labelLanguage.Location = new System.Drawing.Point(78, 420);
+            this.labelLanguage.Name = "labelLanguage";
+            this.labelLanguage.Size = new System.Drawing.Size(0, 24);
+            this.labelLanguage.TabIndex = 51;
+            // 
+            // errorProvider1
+            // 
+            this.errorProvider1.ContainerControl = this;
+            // 
             // Languages
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(11F, 24F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.White;
+            this.Controls.Add(this.labelLanguage);
             this.Controls.Add(this.CBL_Language);
             this.Controls.Add(this.Prev);
             this.Controls.Add(this.Next);
@@ -102,6 +119,7 @@
             this.Margin = new System.Windows.Forms.Padding(6);
             this.Name = "Languages";
             this.Size = new System.Drawing.Size(1007, 725);
+            ((System.ComponentModel.ISupportInitialize)(this.errorProvider1)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -113,5 +131,7 @@
         private System.Windows.Forms.Label Title;
         private System.Windows.Forms.Button Prev;
         private System.Windows.Forms.CheckedListBox CBL_Language;
+        private System.Windows.Forms.Label labelLanguage;
+        private System.Windows.Forms.ErrorProvider errorProvider1;
     }
 }

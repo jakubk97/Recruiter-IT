@@ -40,7 +40,7 @@ namespace Recruiter
         public event Action GetTechnologie;
 
         public event Action<string, string, string, string, string, string, string, string> UPLoadForm2;
-        public event Action<string, string, string, string, string, string, string, string> UPLoadForm3;
+        public event Action<string, string, string, string, string, string> UPLoadForm3;
         public event Action<string> UPLoadForm4;
         public event Action<string, string, string, string> UPLoadForm5;
         public event Action<string, string> UPLoadForm6;
@@ -64,10 +64,10 @@ namespace Recruiter
 
             panel1.Controls.Add(s2);
             s2.BringToFront();
-            UploadControls(panel1, Forma.Instance);
+            UploadControls2(panel1, Forma.Instance);
         }
 
-        private void UploadControls(Panel pan, Forma f)
+        private void UploadControls2(Panel pan, Forma f)
         {
             TextBox t1 = pan.Parent.Controls.Find("FirstName", true)[0] as TextBox;
             t1.Text = f.Imie;
@@ -114,7 +114,35 @@ namespace Recruiter
             s3.WczytajUczelnie += S3_WczytajUczelnie;
             panel1.Controls.Add(s3);
             s3.BringToFront();
+            UploadControls3(panel1, Forma.Instance);
         }
+        private void UploadControls3(Panel pan, Forma f)
+        {
+            ComboBox t1 = pan.Parent.Controls.Find("CollageName", true)[0] as ComboBox;
+            t1.SelectedItem = f.Nazwauczelni;
+            ComboBox t2 = pan.Parent.Controls.Find("CollageKier", true)[0] as ComboBox;
+            t2.SelectedItem = f.Kierunek;
+            ComboBox t3 = pan.Parent.Controls.Find("Mode", true)[0] as ComboBox;
+            t3.SelectedItem = f.Trybstudiow;
+            ComboBox t4 = pan.Parent.Controls.Find("WorkTitle", true)[0] as ComboBox;
+            t4.SelectedItem = f.Tytzawodowy;
+            DateTimePicker dtp = pan.Parent.Controls.Find("dateTimePicker1", true)[0] as DateTimePicker;
+            DateTime parsedDate;
+            if (f.D_roz_studiow != "")
+            {
+                DateTime.TryParseExact(f.D_roz_studiow, "dd.MM.yyyy", null, DateTimeStyles.None, out parsedDate);
+                dtp.Value = parsedDate;
+            }
+            DateTimePicker dtp2 = pan.Parent.Controls.Find("dateTimePicker2", true)[0] as DateTimePicker;
+            DateTime parsedDate2;
+            if (f.D_zak_studiow != "")
+            {
+                DateTime.TryParseExact(f.D_zak_studiow, "dd.MM.yyyy", null, DateTimeStyles.None, out parsedDate);
+                dtp.Value = parsedDate;
+            }
+        }
+
+
         string[] uczelnie;
         string[] IView.Uczelnie
         {
@@ -141,11 +169,11 @@ namespace Recruiter
             s3.CollageK = kierunki;
         }
 
-        private void S3_UPLoadForm3(string krajstudiow, string nazwauczelni, string wydzial, string kierunek
+        private void S3_UPLoadForm3(string nazwauczelni, string kierunek
             , string trybstudiow, string tytzawodowy, string d_roz_studiow, string d_zak_studiow)
         {
             if (UPLoadForm3 != null)
-                UPLoadForm3(krajstudiow, nazwauczelni, wydzial, kierunek
+                UPLoadForm3(nazwauczelni, kierunek
             , trybstudiow, tytzawodowy, d_roz_studiow, d_zak_studiow);
         }
 
@@ -159,6 +187,8 @@ namespace Recruiter
             panel1.Controls.Add(s4);
             s4.BringToFront();
         }
+
+
 
         private void S4_UPLoadForm4(string jezyki)
         {
@@ -175,6 +205,29 @@ namespace Recruiter
             s5.UPLoadForm5 += S5_UPLoadForm5;
             panel1.Controls.Add(s5);
             s5.BringToFront();
+            UploadControls5(panel1, Forma.Instance);
+        }
+        private void UploadControls5(Panel pan, Forma f)
+        {
+            TextBox t1 = pan.Parent.Controls.Find("Firm1Name", true)[0] as TextBox;
+            t1.Text = f.Nazwa;
+            TextBox t2 = pan.Parent.Controls.Find("Firm1Position", true)[0] as TextBox;
+            t2.Text = f.Stanowisko;
+
+            DateTimePicker dtp = pan.Parent.Controls.Find("dateTimePickerod", true)[0] as DateTimePicker;
+            DateTime parsedDate;
+            if (f.Data_od != "")
+            {
+                DateTime.TryParseExact(f.Data_od, "dd.MM.yyyy", null, DateTimeStyles.None, out parsedDate);
+                dtp.Value = parsedDate;
+            }
+            DateTimePicker dtp2 = pan.Parent.Controls.Find("dateTimePickerdo", true)[0] as DateTimePicker;
+            DateTime parsedDate2;
+            if (f.Data_do != "")
+            {
+                DateTime.TryParseExact(f.Data_do, "dd.MM.yyyy", null, DateTimeStyles.None, out parsedDate);
+                dtp.Value = parsedDate;
+            }
         }
 
         private void S5_UPLoadForm5(string nazwa, string stanowisko, string data_od, string data_do)
@@ -193,6 +246,13 @@ namespace Recruiter
             s6.WczytajTechnologie += S6_WczytajTechnologie;
             panel1.Controls.Add(s6);
             s6.BringToFront();
+            UploadControls6(panel1, Forma.Instance);
+        }
+
+        private void UploadControls6(Panel pan, Forma f)
+        {
+            TextBox t1 = pan.Parent.Controls.Find("Links", true)[0] as TextBox;
+            t1.Text = f.Nazwa;
         }
 
         private void S6_WczytajTechnologie(Screen6 obj)

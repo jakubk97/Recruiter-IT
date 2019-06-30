@@ -17,6 +17,8 @@ namespace Recruiter
 
             Mode.DataSource = TS();
             WorkTitle.DataSource = WT();
+            Mode.Text = "";
+            WorkTitle.Text = "";
         }
         #region Events
         public event Action StartForm2;
@@ -25,18 +27,18 @@ namespace Recruiter
         public event Action<Screen3> WczytajUczelnie;
         public event Action<Screen3> WczytajKierunki;
 
-        public event Action<string, string, string, string, string, string, string, string> UPLoadForm3;
+        public event Action<string, string, string, string, string, string> UPLoadForm3;
         #endregion
 
         private string[] TS()
         {
-            List<string> lista = new List<string> { "stacjonarne", "niestacjonarne", "eksternistyczne", "insywidualne","kursy" };
+            List<string> lista = new List<string> { "stacjonarne", "niestacjonarne", "eksternistyczne", "insywidualne", "kursy" };
             return lista.ToArray();
         }
 
         private string[] WT()
         {
-            List<string> lista = new List<string> { "licencjat", "inżynier", "magister", "doktor", "profesor","brak" };
+            List<string> lista = new List<string> { "licencjat", "inżynier", "magister", "doktor", "profesor", "brak" };
             return lista.ToArray();
         }
 
@@ -62,8 +64,22 @@ namespace Recruiter
 
         private void Next_Click(object sender, EventArgs e)
         {
-            if (StartForm4 != null)
-                StartForm4();
+            if (CollageName.SelectedIndex != -1 && CollageKier.SelectedIndex != -1 &&
+                    Mode.SelectedIndex != -1 && WorkTitle.SelectedIndex != -1)
+            {
+                errorProvider1.Clear();
+                if (UPLoadForm3 != null)
+                    UPLoadForm3(CollageName.SelectedItem.ToString(), CollageKier.SelectedItem.ToString(),
+                        Mode.SelectedItem.ToString(), WorkTitle.SelectedItem.ToString(),
+                        dateTimePicker1.Value.ToShortDateString(), dateTimePicker2.Value.ToShortDateString());
+
+                if (StartForm4 != null)
+                    StartForm4();
+            }
+            else
+            {
+                errorProvider1.SetError(Next, "Należy zaznaczyć wszystkie pola!");
+            }
         }
 
         private void Prev_Click(object sender, EventArgs e)

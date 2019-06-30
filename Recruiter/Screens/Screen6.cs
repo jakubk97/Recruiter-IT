@@ -34,8 +34,25 @@ namespace Recruiter
         }
         private void Next_Click(object sender, EventArgs e)
         {
-            if (StartForm7 != null)
-                StartForm7();
+            if (comboBox1.SelectedItems.Count != 0)
+            {
+                errorProvider1.Clear();
+                if (UPLoadForm6 != null)
+                {
+                    string technologie = "";
+                    foreach (string li1 in comboBox1.CheckedItems)
+                    {
+                        technologie += li1 + " ; ";
+                    }
+                    UPLoadForm6(technologie, Links.Text);
+                }
+                if (StartForm7 != null)
+                    StartForm7();
+            }
+            else
+            {
+                errorProvider1.SetError(Next, "Należy zaznaczyć przynajmniej jedno pole!");
+            }
         }
 
         private void Prev_Click(object sender, EventArgs e)
@@ -45,6 +62,12 @@ namespace Recruiter
         }
 
         private void comboBox1_DropDown(object sender, EventArgs e)
+        {
+            if (WczytajTechnologie != null)
+                WczytajTechnologie(this);
+        }
+
+        private void button1_Click(object sender, EventArgs e)
         {
             if (WczytajTechnologie != null)
                 WczytajTechnologie(this);
