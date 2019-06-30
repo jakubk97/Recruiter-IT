@@ -1,6 +1,6 @@
 ﻿namespace Recruiter
 {
-    partial class Screen4
+    partial class Languages
     {
         /// <summary> 
         /// Required designer variable.
@@ -31,7 +31,7 @@
             this.Next = new System.Windows.Forms.Button();
             this.Title = new System.Windows.Forms.Label();
             this.Prev = new System.Windows.Forms.Button();
-            this.comboBox1 = new System.Windows.Forms.ComboBox();
+            this.checkedListBox1 = new System.Windows.Forms.CheckedListBox();
             this.SuspendLayout();
             // 
             // Next
@@ -40,9 +40,10 @@
             this.Next.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.Next.Font = new System.Drawing.Font("Segoe UI", 16F);
             this.Next.ForeColor = System.Drawing.Color.White;
-            this.Next.Location = new System.Drawing.Point(430, 647);
+            this.Next.Location = new System.Drawing.Point(434, 649);
+            this.Next.Margin = new System.Windows.Forms.Padding(6);
             this.Next.Name = "Next";
-            this.Next.Padding = new System.Windows.Forms.Padding(0, 0, 0, 3);
+            this.Next.Padding = new System.Windows.Forms.Padding(0, 0, 0, 6);
             this.Next.Size = new System.Drawing.Size(140, 50);
             this.Next.TabIndex = 35;
             this.Next.Text = "Dalej";
@@ -54,7 +55,7 @@
             this.Title.AutoSize = true;
             this.Title.Font = new System.Drawing.Font("Segoe UI", 30F);
             this.Title.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(30)))), ((int)(((byte)(80)))), ((int)(((byte)(190)))));
-            this.Title.Location = new System.Drawing.Point(40, 40);
+            this.Title.Location = new System.Drawing.Point(73, 74);
             this.Title.Margin = new System.Windows.Forms.Padding(0);
             this.Title.Name = "Title";
             this.Title.Size = new System.Drawing.Size(125, 54);
@@ -68,33 +69,38 @@
             this.Prev.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.Prev.Font = new System.Drawing.Font("Segoe UI", 16F);
             this.Prev.ForeColor = System.Drawing.Color.White;
-            this.Prev.Location = new System.Drawing.Point(284, 647);
+            this.Prev.Location = new System.Drawing.Point(282, 649);
+            this.Prev.Margin = new System.Windows.Forms.Padding(6);
             this.Prev.Name = "Prev";
-            this.Prev.Padding = new System.Windows.Forms.Padding(0, 0, 0, 3);
+            this.Prev.Padding = new System.Windows.Forms.Padding(0, 0, 0, 6);
             this.Prev.Size = new System.Drawing.Size(140, 50);
             this.Prev.TabIndex = 48;
             this.Prev.Text = "Wstecz";
             this.Prev.UseVisualStyleBackColor = false;
             this.Prev.Click += new System.EventHandler(this.Prev_Click);
             // 
-            // comboBox1
+            // checkedListBox1
             // 
-            this.comboBox1.FormattingEnabled = true;
-            this.comboBox1.Location = new System.Drawing.Point(49, 117);
-            this.comboBox1.Name = "comboBox1";
-            this.comboBox1.Size = new System.Drawing.Size(337, 21);
-            this.comboBox1.TabIndex = 49;
+            this.checkedListBox1.BackColor = System.Drawing.SystemColors.ScrollBar;
+            this.checkedListBox1.FormattingEnabled = true;
+            this.checkedListBox1.Location = new System.Drawing.Point(82, 173);
+            this.checkedListBox1.MultiColumn = true;
+            this.checkedListBox1.Name = "checkedListBox1";
+            this.checkedListBox1.Size = new System.Drawing.Size(646, 244);
+            this.checkedListBox1.TabIndex = 50;
             // 
-            // Screen4
+            // Languages
             // 
-            this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
+            this.AutoScaleDimensions = new System.Drawing.SizeF(11F, 24F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.White;
-            this.Controls.Add(this.comboBox1);
+            this.Controls.Add(this.checkedListBox1);
             this.Controls.Add(this.Prev);
             this.Controls.Add(this.Next);
             this.Controls.Add(this.Title);
-            this.Name = "Screen4";
+            this.Font = new System.Drawing.Font("Microsoft Sans Serif", 14.25F);
+            this.Margin = new System.Windows.Forms.Padding(6);
+            this.Name = "Languages";
             this.Size = new System.Drawing.Size(1007, 725);
             this.ResumeLayout(false);
             this.PerformLayout();
@@ -106,6 +112,6 @@
         private System.Windows.Forms.Button Next;
         private System.Windows.Forms.Label Title;
         private System.Windows.Forms.Button Prev;
-        private System.Windows.Forms.ComboBox comboBox1;
+        private System.Windows.Forms.CheckedListBox checkedListBox1;
     }
 }

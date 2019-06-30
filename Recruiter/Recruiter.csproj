@@ -68,7 +68,12 @@
   <ItemGroup>
     <Compile Include="DB\DBConnection.cs" />
     <Compile Include="DB\DBInfo.Designer.cs" />
-    <Compile Include="DB\Repository.cs" />
+    <Compile Include="DB\DBInformations.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>DBInformations.resx</DependentUpon>
+    </Compile>
+    <Compile Include="Repository.cs" />
     <Compile Include="Forma.cs" />
     <Compile Include="IView.cs" />
     <Compile Include="Presenter.cs" />
@@ -134,7 +139,10 @@
     </Compile>
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
-    <EmbeddedResource Include="DB\DBInfo.resx" />
+    <EmbeddedResource Include="DB\DBInformations.resx">
+      <Generator>ResXFileCodeGenerator</Generator>
+      <LastGenOutput>DBInformations.Designer.cs</LastGenOutput>
+    </EmbeddedResource>
     <EmbeddedResource Include="Screens\Screen4.resx">
       <DependentUpon>Screen4.cs</DependentUpon>
     </EmbeddedResource>

@@ -37,6 +37,17 @@ namespace Recruiter
             }
         }
 
+        public string[] GetUczelnie()
+        {
+            return Repository.GetUczelnie();
+        }
+
+        public string[] GetKierunki()
+        {
+            return Repository.GetKierunki();
+        }
+
+
         public void Form2(string imie, string drugie, string nazwisko, string data_urodzenia, string email
             , string telefon, string adres, string zdjecie)
         {

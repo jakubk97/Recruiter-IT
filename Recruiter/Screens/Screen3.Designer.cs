@@ -33,13 +33,7 @@
             this.WorkTitleLabel = new System.Windows.Forms.Label();
             this.ModeLabel = new System.Windows.Forms.Label();
             this.SpecializationLabel = new System.Windows.Forms.Label();
-            this.Specialization = new System.Windows.Forms.TextBox();
-            this.FacultyLabel = new System.Windows.Forms.Label();
-            this.Faculty = new System.Windows.Forms.TextBox();
             this.UniversityNameLabel = new System.Windows.Forms.Label();
-            this.UniversityName = new System.Windows.Forms.TextBox();
-            this.StudyCountryLabel = new System.Windows.Forms.Label();
-            this.StudyCountry = new System.Windows.Forms.TextBox();
             this.Title = new System.Windows.Forms.Label();
             this.EndDateLabel = new System.Windows.Forms.Label();
             this.Mode = new System.Windows.Forms.ComboBox();
@@ -47,6 +41,8 @@
             this.dateTimePicker1 = new System.Windows.Forms.DateTimePicker();
             this.dateTimePicker2 = new System.Windows.Forms.DateTimePicker();
             this.Prev = new System.Windows.Forms.Button();
+            this.CollageKier = new System.Windows.Forms.ComboBox();
+            this.CollageName = new System.Windows.Forms.ComboBox();
             this.SuspendLayout();
             // 
             // Next
@@ -69,7 +65,7 @@
             this.StartDateLabel.AutoSize = true;
             this.StartDateLabel.Font = new System.Drawing.Font("Segoe UI", 16F);
             this.StartDateLabel.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(30)))), ((int)(((byte)(80)))), ((int)(((byte)(190)))));
-            this.StartDateLabel.Location = new System.Drawing.Point(46, 492);
+            this.StartDateLabel.Location = new System.Drawing.Point(46, 433);
             this.StartDateLabel.Margin = new System.Windows.Forms.Padding(0);
             this.StartDateLabel.Name = "StartDateLabel";
             this.StartDateLabel.Size = new System.Drawing.Size(259, 30);
@@ -82,7 +78,7 @@
             this.WorkTitleLabel.AutoSize = true;
             this.WorkTitleLabel.Font = new System.Drawing.Font("Segoe UI", 16F);
             this.WorkTitleLabel.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(30)))), ((int)(((byte)(80)))), ((int)(((byte)(190)))));
-            this.WorkTitleLabel.Location = new System.Drawing.Point(44, 427);
+            this.WorkTitleLabel.Location = new System.Drawing.Point(44, 368);
             this.WorkTitleLabel.Margin = new System.Windows.Forms.Padding(0);
             this.WorkTitleLabel.Name = "WorkTitleLabel";
             this.WorkTitleLabel.Size = new System.Drawing.Size(169, 30);
@@ -95,7 +91,7 @@
             this.ModeLabel.AutoSize = true;
             this.ModeLabel.Font = new System.Drawing.Font("Segoe UI", 16F);
             this.ModeLabel.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(30)))), ((int)(((byte)(80)))), ((int)(((byte)(190)))));
-            this.ModeLabel.Location = new System.Drawing.Point(44, 358);
+            this.ModeLabel.Location = new System.Drawing.Point(44, 299);
             this.ModeLabel.Margin = new System.Windows.Forms.Padding(0);
             this.ModeLabel.Name = "ModeLabel";
             this.ModeLabel.Size = new System.Drawing.Size(136, 30);
@@ -108,46 +104,13 @@
             this.SpecializationLabel.AutoSize = true;
             this.SpecializationLabel.Font = new System.Drawing.Font("Segoe UI", 16F);
             this.SpecializationLabel.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(30)))), ((int)(((byte)(80)))), ((int)(((byte)(190)))));
-            this.SpecializationLabel.Location = new System.Drawing.Point(44, 297);
+            this.SpecializationLabel.Location = new System.Drawing.Point(44, 238);
             this.SpecializationLabel.Margin = new System.Windows.Forms.Padding(0);
             this.SpecializationLabel.Name = "SpecializationLabel";
             this.SpecializationLabel.Size = new System.Drawing.Size(98, 30);
             this.SpecializationLabel.TabIndex = 27;
             this.SpecializationLabel.Text = "Kierunek";
             this.SpecializationLabel.TextAlign = System.Drawing.ContentAlignment.TopCenter;
-            // 
-            // Specialization
-            // 
-            this.Specialization.BackColor = System.Drawing.SystemColors.ScrollBar;
-            this.Specialization.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
-            this.Specialization.Font = new System.Drawing.Font("Segoe UI", 14F);
-            this.Specialization.Location = new System.Drawing.Point(284, 299);
-            this.Specialization.Name = "Specialization";
-            this.Specialization.Size = new System.Drawing.Size(215, 32);
-            this.Specialization.TabIndex = 26;
-            // 
-            // FacultyLabel
-            // 
-            this.FacultyLabel.AutoSize = true;
-            this.FacultyLabel.Font = new System.Drawing.Font("Segoe UI", 16F);
-            this.FacultyLabel.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(30)))), ((int)(((byte)(80)))), ((int)(((byte)(190)))));
-            this.FacultyLabel.Location = new System.Drawing.Point(44, 236);
-            this.FacultyLabel.Margin = new System.Windows.Forms.Padding(0);
-            this.FacultyLabel.Name = "FacultyLabel";
-            this.FacultyLabel.Size = new System.Drawing.Size(90, 30);
-            this.FacultyLabel.TabIndex = 25;
-            this.FacultyLabel.Text = "Wydział";
-            this.FacultyLabel.TextAlign = System.Drawing.ContentAlignment.TopCenter;
-            // 
-            // Faculty
-            // 
-            this.Faculty.BackColor = System.Drawing.SystemColors.ScrollBar;
-            this.Faculty.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
-            this.Faculty.Font = new System.Drawing.Font("Segoe UI", 14F);
-            this.Faculty.Location = new System.Drawing.Point(284, 238);
-            this.Faculty.Name = "Faculty";
-            this.Faculty.Size = new System.Drawing.Size(215, 32);
-            this.Faculty.TabIndex = 24;
             // 
             // UniversityNameLabel
             // 
@@ -161,39 +124,6 @@
             this.UniversityNameLabel.TabIndex = 23;
             this.UniversityNameLabel.Text = "Nazwa uczelni";
             this.UniversityNameLabel.TextAlign = System.Drawing.ContentAlignment.TopCenter;
-            // 
-            // UniversityName
-            // 
-            this.UniversityName.BackColor = System.Drawing.SystemColors.ScrollBar;
-            this.UniversityName.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
-            this.UniversityName.Font = new System.Drawing.Font("Segoe UI", 14F);
-            this.UniversityName.Location = new System.Drawing.Point(284, 177);
-            this.UniversityName.Name = "UniversityName";
-            this.UniversityName.Size = new System.Drawing.Size(215, 32);
-            this.UniversityName.TabIndex = 22;
-            // 
-            // StudyCountryLabel
-            // 
-            this.StudyCountryLabel.AutoSize = true;
-            this.StudyCountryLabel.Font = new System.Drawing.Font("Segoe UI", 16F);
-            this.StudyCountryLabel.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(30)))), ((int)(((byte)(80)))), ((int)(((byte)(190)))));
-            this.StudyCountryLabel.Location = new System.Drawing.Point(44, 114);
-            this.StudyCountryLabel.Margin = new System.Windows.Forms.Padding(0);
-            this.StudyCountryLabel.Name = "StudyCountryLabel";
-            this.StudyCountryLabel.Size = new System.Drawing.Size(131, 30);
-            this.StudyCountryLabel.TabIndex = 21;
-            this.StudyCountryLabel.Text = "Kraj studiów";
-            this.StudyCountryLabel.TextAlign = System.Drawing.ContentAlignment.TopCenter;
-            // 
-            // StudyCountry
-            // 
-            this.StudyCountry.BackColor = System.Drawing.SystemColors.ScrollBar;
-            this.StudyCountry.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
-            this.StudyCountry.Font = new System.Drawing.Font("Segoe UI", 14F);
-            this.StudyCountry.Location = new System.Drawing.Point(284, 116);
-            this.StudyCountry.Name = "StudyCountry";
-            this.StudyCountry.Size = new System.Drawing.Size(215, 32);
-            this.StudyCountry.TabIndex = 20;
             // 
             // Title
             // 
@@ -213,7 +143,7 @@
             this.EndDateLabel.AutoSize = true;
             this.EndDateLabel.Font = new System.Drawing.Font("Segoe UI", 16F);
             this.EndDateLabel.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(30)))), ((int)(((byte)(80)))), ((int)(((byte)(190)))));
-            this.EndDateLabel.Location = new System.Drawing.Point(44, 557);
+            this.EndDateLabel.Location = new System.Drawing.Point(44, 498);
             this.EndDateLabel.Margin = new System.Windows.Forms.Padding(0);
             this.EndDateLabel.Name = "EndDateLabel";
             this.EndDateLabel.Size = new System.Drawing.Size(261, 30);
@@ -227,9 +157,9 @@
             this.Mode.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.Mode.Font = new System.Drawing.Font("Segoe UI", 14F);
             this.Mode.FormattingEnabled = true;
-            this.Mode.Location = new System.Drawing.Point(284, 359);
+            this.Mode.Location = new System.Drawing.Point(284, 300);
             this.Mode.Name = "Mode";
-            this.Mode.Size = new System.Drawing.Size(194, 33);
+            this.Mode.Size = new System.Drawing.Size(414, 33);
             this.Mode.TabIndex = 39;
             // 
             // WorkTitle
@@ -238,7 +168,7 @@
             this.WorkTitle.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.WorkTitle.Font = new System.Drawing.Font("Segoe UI", 14F);
             this.WorkTitle.FormattingEnabled = true;
-            this.WorkTitle.Location = new System.Drawing.Point(284, 428);
+            this.WorkTitle.Location = new System.Drawing.Point(284, 369);
             this.WorkTitle.Name = "WorkTitle";
             this.WorkTitle.Size = new System.Drawing.Size(194, 33);
             this.WorkTitle.TabIndex = 40;
@@ -248,7 +178,7 @@
             this.dateTimePicker1.CalendarMonthBackground = System.Drawing.SystemColors.ScrollBar;
             this.dateTimePicker1.CustomFormat = "dd-MM-yyyy";
             this.dateTimePicker1.Font = new System.Drawing.Font("Microsoft Sans Serif", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(238)));
-            this.dateTimePicker1.Location = new System.Drawing.Point(49, 525);
+            this.dateTimePicker1.Location = new System.Drawing.Point(49, 466);
             this.dateTimePicker1.MinDate = new System.DateTime(1900, 1, 1, 0, 0, 0, 0);
             this.dateTimePicker1.Name = "dateTimePicker1";
             this.dateTimePicker1.Size = new System.Drawing.Size(412, 29);
@@ -260,7 +190,7 @@
             this.dateTimePicker2.CalendarMonthBackground = System.Drawing.SystemColors.ScrollBar;
             this.dateTimePicker2.CustomFormat = "dd-MM-yyyy";
             this.dateTimePicker2.Font = new System.Drawing.Font("Microsoft Sans Serif", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(238)));
-            this.dateTimePicker2.Location = new System.Drawing.Point(49, 590);
+            this.dateTimePicker2.Location = new System.Drawing.Point(49, 531);
             this.dateTimePicker2.MinDate = new System.DateTime(1900, 1, 1, 0, 0, 0, 0);
             this.dateTimePicker2.Name = "dateTimePicker2";
             this.dateTimePicker2.Size = new System.Drawing.Size(412, 29);
@@ -282,11 +212,37 @@
             this.Prev.UseVisualStyleBackColor = false;
             this.Prev.Click += new System.EventHandler(this.Prev_Click);
             // 
+            // CollageKier
+            // 
+            this.CollageKier.BackColor = System.Drawing.SystemColors.ScrollBar;
+            this.CollageKier.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.CollageKier.Font = new System.Drawing.Font("Segoe UI", 14F);
+            this.CollageKier.FormattingEnabled = true;
+            this.CollageKier.Location = new System.Drawing.Point(284, 239);
+            this.CollageKier.Name = "CollageKier";
+            this.CollageKier.Size = new System.Drawing.Size(414, 33);
+            this.CollageKier.TabIndex = 45;
+            this.CollageKier.DropDown += new System.EventHandler(this.CollageKier_DropDown);
+            // 
+            // CollageName
+            // 
+            this.CollageName.BackColor = System.Drawing.SystemColors.ScrollBar;
+            this.CollageName.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.CollageName.Font = new System.Drawing.Font("Segoe UI", 14F);
+            this.CollageName.FormattingEnabled = true;
+            this.CollageName.Location = new System.Drawing.Point(284, 176);
+            this.CollageName.Name = "CollageName";
+            this.CollageName.Size = new System.Drawing.Size(414, 33);
+            this.CollageName.TabIndex = 44;
+            this.CollageName.DropDown += new System.EventHandler(this.CollageName_DropDown);
+            // 
             // Screen3
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.White;
+            this.Controls.Add(this.CollageKier);
+            this.Controls.Add(this.CollageName);
             this.Controls.Add(this.Prev);
             this.Controls.Add(this.dateTimePicker2);
             this.Controls.Add(this.dateTimePicker1);
@@ -298,13 +254,7 @@
             this.Controls.Add(this.WorkTitleLabel);
             this.Controls.Add(this.ModeLabel);
             this.Controls.Add(this.SpecializationLabel);
-            this.Controls.Add(this.Specialization);
-            this.Controls.Add(this.FacultyLabel);
-            this.Controls.Add(this.Faculty);
             this.Controls.Add(this.UniversityNameLabel);
-            this.Controls.Add(this.UniversityName);
-            this.Controls.Add(this.StudyCountryLabel);
-            this.Controls.Add(this.StudyCountry);
             this.Controls.Add(this.Title);
             this.Name = "Screen3";
             this.Size = new System.Drawing.Size(1007, 725);
@@ -320,13 +270,7 @@
         private System.Windows.Forms.Label WorkTitleLabel;
         private System.Windows.Forms.Label ModeLabel;
         private System.Windows.Forms.Label SpecializationLabel;
-        private System.Windows.Forms.TextBox Specialization;
-        private System.Windows.Forms.Label FacultyLabel;
-        private System.Windows.Forms.TextBox Faculty;
         private System.Windows.Forms.Label UniversityNameLabel;
-        private System.Windows.Forms.TextBox UniversityName;
-        private System.Windows.Forms.Label StudyCountryLabel;
-        private System.Windows.Forms.TextBox StudyCountry;
         private System.Windows.Forms.Label Title;
         private System.Windows.Forms.Label EndDateLabel;
         private System.Windows.Forms.ComboBox Mode;
@@ -334,5 +278,7 @@
         private System.Windows.Forms.DateTimePicker dateTimePicker1;
         private System.Windows.Forms.DateTimePicker dateTimePicker2;
         private System.Windows.Forms.Button Prev;
+        private System.Windows.Forms.ComboBox CollageKier;
+        private System.Windows.Forms.ComboBox CollageName;
     }
 }

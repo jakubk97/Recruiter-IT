@@ -15,7 +15,7 @@ namespace Recruiter
         private Screen1 s1;
         private Screen2 s2;
         private Screen3 s3;
-        private Screen4 s4;
+        private Languages s4;
         private Screen5 s5;
         private Screen6 s6;
         private Screen7 s7;
@@ -32,15 +32,10 @@ namespace Recruiter
         public event Action StartForm9;
 
 
-        //public event Action<Forma> StartForm2Load;
-        //public event Action<Forma> StartForm3Load;
-        //public event Action<Forma> StartForm4Load;
-        //public event Action<Forma> StartForm5Load;
-        //public event Action<Forma> StartForm6Load;
-        //public event Action<Forma> StartForm7Load;
-        //public event Action<Forma> StartForm8Load;
-        //public event Action<Forma> StartForm9Load;
-
+        public event Action<Screen3> WczytajUczelnie;
+        public event Action<Screen3> WczytajKierunki;
+        public event Action GetUczelnie;
+        public event Action GetKierunki;
 
 
         public event Action<string, string, string, string, string, string, string, string> UPLoadForm2;
@@ -50,6 +45,7 @@ namespace Recruiter
         public event Action<string, string> UPLoadForm6;
         public event Action<string, string, string, string, string, string> UPLoadForm7;
         public event Action<string, string> UPLoadForm8;
+
 
         public View()
         {
@@ -113,10 +109,36 @@ namespace Recruiter
             s3.StartForm2 += S1_StartForm2;
             s3.StartForm4 += S3_StartForm4;
             s3.UPLoadForm3 += S3_UPLoadForm3;
+            s3.WczytajKierunki += S3_WczytajKierunki;
+            s3.WczytajUczelnie += S3_WczytajUczelnie;
             panel1.Controls.Add(s3);
             s3.BringToFront();
         }
+        string[] uczelnie;
+        string[] IView.Uczelnie
+        {
+            get { return uczelnie; }
+            set { uczelnie = value; }
+        }
+        string[] kierunki;
+        string[] IView.Kierunki
+        {
+            get { return kierunki; }
+            set { kierunki = value; }
+        }
+        private void S3_WczytajUczelnie(Screen3 s3)
+        {
+            if (GetUczelnie != null)
+                GetUczelnie();
+            s3.CollageN = uczelnie;
+        }
 
+        private void S3_WczytajKierunki(Screen3 s3)
+        {
+            if (GetKierunki != null)
+                GetKierunki();
+            s3.CollageK = kierunki;
+        }
 
         private void S3_UPLoadForm3(string krajstudiow, string nazwauczelni, string wydzial, string kierunek
             , string trybstudiow, string tytzawodowy, string d_roz_studiow, string d_zak_studiow)
@@ -129,7 +151,7 @@ namespace Recruiter
         private void S3_StartForm4()
         {
             panel1.Controls.Clear();
-            s4 = new Screen4();
+            s4 = new Languages();
             s4.StartForm3 += S2_StartForm3;
             s4.StartForm5 += S4_StartForm5;
             s4.UPLoadForm4 += S4_UPLoadForm4;

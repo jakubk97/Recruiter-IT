@@ -1,5 +1,6 @@
 ﻿using MySql.Data.MySqlClient;
 using System;
+using System.Collections.Generic;
 
 namespace Recruiter
 {
@@ -7,7 +8,66 @@ namespace Recruiter
     {
         private static MySqlConnection connection = DBConnection.Instance.Connection;
 
-        public static int F2(string imie, string drugie, string nazwisko, string data_urodzenia, string email
+
+        public static string[] GetKierunki()
+        {
+            try
+            {
+                List<string> list = new List<string>();
+                string nazwa;
+                using (MySqlCommand command = new MySqlCommand(@"SELECT nazwa FROM kierunki", connection))
+                {
+                    connection.Open();
+                    MySqlDataReader dataReader = command.ExecuteReader();
+                    while (dataReader.Read())
+                    {
+                        nazwa = dataReader["nazwa"].ToString();
+                        list.Add(nazwa);
+                    }
+                }
+                return list.ToArray();
+            }
+            catch (Exception)
+            {
+                Console.WriteLine("\nBłąd podczas dodawania rekordu do bazy\nSprawdź połączenie z bazą\n");
+                return new List<string>().ToArray(); ;
+            }
+            finally
+            {
+                connection.Close();
+            }
+        }
+
+        public static string[] GetUczelnie()
+        {
+            try
+            {
+                List<string> list = new List<string>();
+                string nazwa;
+                using (MySqlCommand command = new MySqlCommand(@"SELECT nazwa FROM uczelnie", connection))
+                {
+                    connection.Open();
+                    MySqlDataReader dataReader = command.ExecuteReader();
+                    while (dataReader.Read())
+                    {
+                        nazwa = dataReader["nazwa"].ToString();
+                        list.Add(nazwa);
+                    }
+                }
+                return list.ToArray();
+            }
+            catch (Exception ex)
+            {
+                Console.WriteLine("\nBłąd podczas dodawania rekordu do bazy\nSprawdź połączenie z bazą\n");
+                return new List<string>().ToArray(); ;
+            }
+            finally
+            {
+                connection.Close();
+            }
+        }
+
+        public int F2(string imie, string drugie, string nazwisko, string data_urodzenia, string email
             , string telefon, string adres, string zdjecie)
         {
             try
@@ -34,7 +94,7 @@ namespace Recruiter
                 return 0;
             }
         }
-        public static int F3(string krajstudiow, string nazwauczelni, string wydzial, string kierunek
+        public int F3(string krajstudiow, string nazwauczelni, string wydzial, string kierunek
             , string trybstudiow, string tytzawodowy, string d_roz_studiow, string d_zak_studiow)
         {
             try
@@ -61,7 +121,7 @@ namespace Recruiter
                 return 0;
             }
         }
-        public static int F4(string jezyki)
+        public int F4(string jezyki)
         {
             try
             {
@@ -87,7 +147,7 @@ namespace Recruiter
                 return 0;
             }
         }
-        public static int F5(string nazwa, string stanowisko, string data_od, string data_do)
+        public int F5(string nazwa, string stanowisko, string data_od, string data_do)
         {
             try
             {
@@ -113,7 +173,7 @@ namespace Recruiter
                 return 0;
             }
         }
-        public static int F6(string technologie, string linki)
+        public int F6(string technologie, string linki)
         {
             try
             {
@@ -139,7 +199,7 @@ namespace Recruiter
                 return 0;
             }
         }
-        public static int F7(string prefstanowisko, string prefoddzial, string prefczaspracy
+        public int F7(string prefstanowisko, string prefoddzial, string prefczaspracy
             , string wynagrodzenie, string pracaodkiedy, string skadwiesz)
         {
             try
@@ -166,7 +226,7 @@ namespace Recruiter
                 return 0;
             }
         }
-        public static int F8(string zainteresowania, string infodlarekrutera)
+        public int F8(string zainteresowania, string infodlarekrutera)
         {
             try
             {

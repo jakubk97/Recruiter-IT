@@ -9,9 +9,9 @@ using System.Windows.Forms;
 
 namespace Recruiter
 {
-    public partial class Screen4 : UserControl
+    public partial class Languages : UserControl
     {
-        public Screen4()
+        public Languages()
         {
             InitializeComponent();
         }

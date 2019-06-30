@@ -118,10 +118,10 @@
     <value>System.Resources.ResXResourceWriter, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
   </resheader>
   <data name="database" xml:space="preserve">
-    <value>quiz</value>
+    <value>projekt</value>
   </data>
   <data name="password" xml:space="preserve">
-    <value>root</value>
+    <value />
   </data>
   <data name="port" xml:space="preserve">
     <value>3320</value>
