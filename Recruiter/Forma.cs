@@ -47,6 +47,10 @@ namespace Recruiter
             return Repository.GetKierunki();
         }
 
+        public string[] GetTechnologie()
+        {
+            return Repository.GetTechnologie();
+        }
 
         public void Form2(string imie, string drugie, string nazwisko, string data_urodzenia, string email
             , string telefon, string adres, string zdjecie)

@@ -31,7 +31,7 @@
             this.Next = new System.Windows.Forms.Button();
             this.Title = new System.Windows.Forms.Label();
             this.Prev = new System.Windows.Forms.Button();
-            this.checkedListBox1 = new System.Windows.Forms.CheckedListBox();
+            this.CBL_Language = new System.Windows.Forms.CheckedListBox();
             this.SuspendLayout();
             // 
             // Next
@@ -79,22 +79,22 @@
             this.Prev.UseVisualStyleBackColor = false;
             this.Prev.Click += new System.EventHandler(this.Prev_Click);
             // 
-            // checkedListBox1
+            // CBL_Language
             // 
-            this.checkedListBox1.BackColor = System.Drawing.SystemColors.ScrollBar;
-            this.checkedListBox1.FormattingEnabled = true;
-            this.checkedListBox1.Location = new System.Drawing.Point(82, 173);
-            this.checkedListBox1.MultiColumn = true;
-            this.checkedListBox1.Name = "checkedListBox1";
-            this.checkedListBox1.Size = new System.Drawing.Size(646, 244);
-            this.checkedListBox1.TabIndex = 50;
+            this.CBL_Language.BackColor = System.Drawing.SystemColors.ScrollBar;
+            this.CBL_Language.FormattingEnabled = true;
+            this.CBL_Language.Location = new System.Drawing.Point(82, 173);
+            this.CBL_Language.MultiColumn = true;
+            this.CBL_Language.Name = "CBL_Language";
+            this.CBL_Language.Size = new System.Drawing.Size(646, 244);
+            this.CBL_Language.TabIndex = 50;
             // 
             // Languages
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(11F, 24F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.White;
-            this.Controls.Add(this.checkedListBox1);
+            this.Controls.Add(this.CBL_Language);
             this.Controls.Add(this.Prev);
             this.Controls.Add(this.Next);
             this.Controls.Add(this.Title);
@@ -112,6 +112,6 @@
         private System.Windows.Forms.Button Next;
         private System.Windows.Forms.Label Title;
         private System.Windows.Forms.Button Prev;
-        private System.Windows.Forms.CheckedListBox checkedListBox1;
+        private System.Windows.Forms.CheckedListBox CBL_Language;
     }
 }

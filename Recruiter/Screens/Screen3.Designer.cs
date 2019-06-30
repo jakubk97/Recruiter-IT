@@ -170,7 +170,7 @@
             this.WorkTitle.FormattingEnabled = true;
             this.WorkTitle.Location = new System.Drawing.Point(284, 369);
             this.WorkTitle.Name = "WorkTitle";
-            this.WorkTitle.Size = new System.Drawing.Size(194, 33);
+            this.WorkTitle.Size = new System.Drawing.Size(414, 33);
             this.WorkTitle.TabIndex = 40;
             // 
             // dateTimePicker1

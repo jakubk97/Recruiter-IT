@@ -14,6 +14,8 @@ namespace Recruiter
         public Languages()
         {
             InitializeComponent();
+
+            CBL_Language.DataSource = LanguagesLoad();
         }
 
         #region Events
@@ -22,6 +24,12 @@ namespace Recruiter
 
         public event Action<string> UPLoadForm4;
         #endregion
+
+        private string[] LanguagesLoad()
+        {
+            List<string> lista = new List<string> { "angielski", "niemiecki", "włoski", "hiszpański", "chiński" };
+            return lista.ToArray();
+        }
 
         private void Next_Click(object sender, EventArgs e)
         {

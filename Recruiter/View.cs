@@ -34,9 +34,10 @@ namespace Recruiter
 
         public event Action<Screen3> WczytajUczelnie;
         public event Action<Screen3> WczytajKierunki;
+        public event Action<Screen6> WczytajTechnologie;
         public event Action GetUczelnie;
         public event Action GetKierunki;
-
+        public event Action GetTechnologie;
 
         public event Action<string, string, string, string, string, string, string, string> UPLoadForm2;
         public event Action<string, string, string, string, string, string, string, string> UPLoadForm3;
@@ -189,10 +190,24 @@ namespace Recruiter
             s6.StartForm5 += S4_StartForm5;
             s6.StartForm7 += S6_StartForm7;
             s6.UPLoadForm6 += S6_UPLoadForm6;
+            s6.WczytajTechnologie += S6_WczytajTechnologie;
             panel1.Controls.Add(s6);
             s6.BringToFront();
         }
 
+        private void S6_WczytajTechnologie(Screen6 obj)
+        {
+            if (GetTechnologie != null)
+                GetTechnologie();
+            s6.Technologies = technologie;
+        }
+
+        string[] technologie;
+        string[] IView.Technologie
+        {
+            get { return technologie; }
+            set { technologie = value; }
+        }
         private void S6_UPLoadForm6(string technologie, string linki)
         {
             if (UPLoadForm6 != null)

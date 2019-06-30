@@ -26,6 +26,12 @@ namespace Recruiter
 
             view.GetUczelnie += View_GetUczelnie;
             view.GetKierunki += View_GetKierunki;
+            view.GetTechnologie += View_GetTechnologie;
+        }
+
+        private void View_GetTechnologie()
+        {
+            view.Technologie = f.GetTechnologie();
         }
 
         private void View_GetKierunki()

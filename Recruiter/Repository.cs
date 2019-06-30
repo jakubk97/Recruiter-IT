@@ -67,6 +67,35 @@ namespace Recruiter
             }
         }
 
+        public static string[] GetTechnologie()
+        {
+            try
+            {
+                List<string> list = new List<string>();
+                string nazwa;
+                using (MySqlCommand command = new MySqlCommand(@"SELECT nazwa FROM technologie", connection))
+                {
+                    connection.Open();
+                    MySqlDataReader dataReader = command.ExecuteReader();
+                    while (dataReader.Read())
+                    {
+                        nazwa = dataReader["nazwa"].ToString();
+                        list.Add(nazwa);
+                    }
+                }
+                return list.ToArray();
+            }
+            catch (Exception ex)
+            {
+                Console.WriteLine("\nBłąd podczas dodawania rekordu do bazy\nSprawdź połączenie z bazą\n");
+                return new List<string>().ToArray(); ;
+            }
+            finally
+            {
+                connection.Close();
+            }
+        }
+
         public int F2(string imie, string drugie, string nazwisko, string data_urodzenia, string email
             , string telefon, string adres, string zdjecie)
         {

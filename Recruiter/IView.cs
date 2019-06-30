@@ -11,10 +11,12 @@ namespace Recruiter
 
         string[] Uczelnie { get; set; }
         string[] Kierunki { get; set; }
+        string[] Technologie { get; set; }
 
         #region Events
         event Action GetUczelnie;
         event Action GetKierunki;
+        event Action GetTechnologie;
 
         event Action StartForm2;
         event Action StartForm3;

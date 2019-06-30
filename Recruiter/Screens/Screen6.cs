@@ -19,8 +19,19 @@ namespace Recruiter
         public event Action StartForm5;
         public event Action StartForm7;
 
+        public event Action<Screen6> WczytajTechnologie;
+
         public event Action<string,string> UPLoadForm6;
         #endregion
+        public string[] Technologies
+        {
+            set
+            {
+                comboBox1.Items.Clear();
+                foreach (var d in value)
+                    comboBox1.Items.Add(d);
+            }
+        }
         private void Next_Click(object sender, EventArgs e)
         {
             if (StartForm7 != null)
@@ -31,6 +42,12 @@ namespace Recruiter
         {
             if (StartForm5 != null)
                 StartForm5();
+        }
+
+        private void comboBox1_DropDown(object sender, EventArgs e)
+        {
+            if (WczytajTechnologie != null)
+                WczytajTechnologie(this);
         }
     }
 }
