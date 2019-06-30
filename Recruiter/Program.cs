@@ -7,13 +7,10 @@ namespace Recruiter
 {
     static class Program
     {
-        /// <summary>
-        /// The main entry point for the application.
-        /// </summary>
         [STAThread]
         static void Main()
         {
-            Model model = new Model();
+            Forma model = Forma.Instance;
             IView view = new View();
             Presenter presenter = new Presenter(view, model);
             Application.Run((View)view);

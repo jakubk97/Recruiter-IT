@@ -14,11 +14,23 @@ namespace Recruiter
         public Screen3()
         {
             InitializeComponent();
+
+            Mode.DataSource = TS();
         }
         #region Events
         public event Action StartForm2;
         public event Action StartForm4;
+
+        //public event Action<Forma> StartForm2Load;
+
+        public event Action<string, string, string, string, string, string, string, string> UPLoadForm3;
         #endregion
+
+        private string[] TS()
+        {
+            List<string> lista = new List<string> { "stacjonarne", "niestacjonarne", "eksternistyczne", "insywidualne","kursy" };
+            return lista.ToArray();
+        }
 
         private void Next_Click(object sender, EventArgs e)
         {

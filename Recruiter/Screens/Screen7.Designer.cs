@@ -75,11 +75,12 @@
             // 
             // CompanyKnowledge
             // 
-            this.CompanyKnowledge.BorderStyle = System.Windows.Forms.BorderStyle.None;
+            this.CompanyKnowledge.BackColor = System.Drawing.SystemColors.ScrollBar;
+            this.CompanyKnowledge.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
             this.CompanyKnowledge.Font = new System.Drawing.Font("Segoe UI", 14F);
-            this.CompanyKnowledge.Location = new System.Drawing.Point(49, 452);
+            this.CompanyKnowledge.Location = new System.Drawing.Point(368, 421);
             this.CompanyKnowledge.Name = "CompanyKnowledge";
-            this.CompanyKnowledge.Size = new System.Drawing.Size(411, 25);
+            this.CompanyKnowledge.Size = new System.Drawing.Size(215, 32);
             this.CompanyKnowledge.TabIndex = 30;
             // 
             // PrefStartDateLabel
@@ -90,18 +91,19 @@
             this.PrefStartDateLabel.Location = new System.Drawing.Point(44, 358);
             this.PrefStartDateLabel.Margin = new System.Windows.Forms.Padding(0);
             this.PrefStartDateLabel.Name = "PrefStartDateLabel";
-            this.PrefStartDateLabel.Size = new System.Drawing.Size(420, 30);
+            this.PrefStartDateLabel.Size = new System.Drawing.Size(260, 30);
             this.PrefStartDateLabel.TabIndex = 29;
-            this.PrefStartDateLabel.Text = "Kiedy możesz rozpocząć? (DD-MM-RRRR)";
+            this.PrefStartDateLabel.Text = "Kiedy możesz rozpocząć?";
             this.PrefStartDateLabel.TextAlign = System.Drawing.ContentAlignment.TopCenter;
             // 
             // PrefStartDate
             // 
-            this.PrefStartDate.BorderStyle = System.Windows.Forms.BorderStyle.None;
+            this.PrefStartDate.BackColor = System.Drawing.SystemColors.ScrollBar;
+            this.PrefStartDate.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
             this.PrefStartDate.Font = new System.Drawing.Font("Segoe UI", 14F);
-            this.PrefStartDate.Location = new System.Drawing.Point(49, 391);
+            this.PrefStartDate.Location = new System.Drawing.Point(368, 360);
             this.PrefStartDate.Name = "PrefStartDate";
-            this.PrefStartDate.Size = new System.Drawing.Size(215, 25);
+            this.PrefStartDate.Size = new System.Drawing.Size(215, 32);
             this.PrefStartDate.TabIndex = 28;
             // 
             // PrefSalaryLabel
@@ -119,11 +121,12 @@
             // 
             // PrefSalary
             // 
-            this.PrefSalary.BorderStyle = System.Windows.Forms.BorderStyle.None;
+            this.PrefSalary.BackColor = System.Drawing.SystemColors.ScrollBar;
+            this.PrefSalary.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
             this.PrefSalary.Font = new System.Drawing.Font("Segoe UI", 14F);
-            this.PrefSalary.Location = new System.Drawing.Point(49, 330);
+            this.PrefSalary.Location = new System.Drawing.Point(368, 299);
             this.PrefSalary.Name = "PrefSalary";
-            this.PrefSalary.Size = new System.Drawing.Size(215, 25);
+            this.PrefSalary.Size = new System.Drawing.Size(215, 32);
             this.PrefSalary.TabIndex = 26;
             // 
             // PrefWorktimeLabel
@@ -134,19 +137,20 @@
             this.PrefWorktimeLabel.Location = new System.Drawing.Point(44, 236);
             this.PrefWorktimeLabel.Margin = new System.Windows.Forms.Padding(0);
             this.PrefWorktimeLabel.Name = "PrefWorktimeLabel";
-            this.PrefWorktimeLabel.Size = new System.Drawing.Size(419, 30);
+            this.PrefWorktimeLabel.Size = new System.Drawing.Size(240, 30);
             this.PrefWorktimeLabel.TabIndex = 25;
-            this.PrefWorktimeLabel.Text = "Preferowany czas pracy (GG:MM-GG:MM)";
+            this.PrefWorktimeLabel.Text = "Preferowany czas pracy";
             this.PrefWorktimeLabel.TextAlign = System.Drawing.ContentAlignment.TopCenter;
             // 
             // PrefWorktime
             // 
-            this.PrefWorktime.BorderStyle = System.Windows.Forms.BorderStyle.None;
+            this.PrefWorktime.BackColor = System.Drawing.SystemColors.ScrollBar;
+            this.PrefWorktime.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
             this.PrefWorktime.Cursor = System.Windows.Forms.Cursors.Default;
             this.PrefWorktime.Font = new System.Drawing.Font("Segoe UI", 14F);
-            this.PrefWorktime.Location = new System.Drawing.Point(49, 269);
+            this.PrefWorktime.Location = new System.Drawing.Point(368, 238);
             this.PrefWorktime.Name = "PrefWorktime";
-            this.PrefWorktime.Size = new System.Drawing.Size(215, 25);
+            this.PrefWorktime.Size = new System.Drawing.Size(215, 32);
             this.PrefWorktime.TabIndex = 24;
             // 
             // PrefBranchLabel
@@ -164,11 +168,12 @@
             // 
             // PrefBranch
             // 
-            this.PrefBranch.BorderStyle = System.Windows.Forms.BorderStyle.None;
+            this.PrefBranch.BackColor = System.Drawing.SystemColors.ScrollBar;
+            this.PrefBranch.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
             this.PrefBranch.Font = new System.Drawing.Font("Segoe UI", 14F);
-            this.PrefBranch.Location = new System.Drawing.Point(49, 208);
+            this.PrefBranch.Location = new System.Drawing.Point(368, 177);
             this.PrefBranch.Name = "PrefBranch";
-            this.PrefBranch.Size = new System.Drawing.Size(215, 25);
+            this.PrefBranch.Size = new System.Drawing.Size(215, 32);
             this.PrefBranch.TabIndex = 22;
             // 
             // PrefPositionLabel
@@ -186,11 +191,12 @@
             // 
             // PrefPosition
             // 
-            this.PrefPosition.BorderStyle = System.Windows.Forms.BorderStyle.None;
+            this.PrefPosition.BackColor = System.Drawing.SystemColors.ScrollBar;
+            this.PrefPosition.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
             this.PrefPosition.Font = new System.Drawing.Font("Segoe UI", 14F);
-            this.PrefPosition.Location = new System.Drawing.Point(49, 147);
+            this.PrefPosition.Location = new System.Drawing.Point(368, 116);
             this.PrefPosition.Name = "PrefPosition";
-            this.PrefPosition.Size = new System.Drawing.Size(215, 25);
+            this.PrefPosition.Size = new System.Drawing.Size(215, 32);
             this.PrefPosition.TabIndex = 20;
             // 
             // Title

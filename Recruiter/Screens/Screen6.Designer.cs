@@ -31,13 +31,13 @@
             this.Next = new System.Windows.Forms.Button();
             this.Specialization = new System.Windows.Forms.TextBox();
             this.KnownTechLabel = new System.Windows.Forms.Label();
-            this.KnownTech = new System.Windows.Forms.TextBox();
             this.Title = new System.Windows.Forms.Label();
             this.KnownTechLabel2 = new System.Windows.Forms.Label();
             this.LinksLabel2 = new System.Windows.Forms.Label();
             this.LinksLabel = new System.Windows.Forms.Label();
             this.Links = new System.Windows.Forms.RichTextBox();
             this.Prev = new System.Windows.Forms.Button();
+            this.comboBox1 = new System.Windows.Forms.ComboBox();
             this.SuspendLayout();
             // 
             // Next
@@ -76,15 +76,6 @@
             this.KnownTechLabel.TabIndex = 43;
             this.KnownTechLabel.Text = "Technologie, które znasz";
             this.KnownTechLabel.TextAlign = System.Drawing.ContentAlignment.TopCenter;
-            // 
-            // KnownTech
-            // 
-            this.KnownTech.BorderStyle = System.Windows.Forms.BorderStyle.None;
-            this.KnownTech.Font = new System.Drawing.Font("Segoe UI", 14F);
-            this.KnownTech.Location = new System.Drawing.Point(49, 160);
-            this.KnownTech.Name = "KnownTech";
-            this.KnownTech.Size = new System.Drawing.Size(215, 25);
-            this.KnownTech.TabIndex = 42;
             // 
             // Title
             // 
@@ -142,11 +133,12 @@
             // 
             // Links
             // 
-            this.Links.BorderStyle = System.Windows.Forms.BorderStyle.None;
+            this.Links.BackColor = System.Drawing.SystemColors.ScrollBar;
+            this.Links.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
             this.Links.Font = new System.Drawing.Font("Segoe UI", 14F);
             this.Links.Location = new System.Drawing.Point(49, 234);
             this.Links.Name = "Links";
-            this.Links.Size = new System.Drawing.Size(521, 407);
+            this.Links.Size = new System.Drawing.Size(604, 171);
             this.Links.TabIndex = 63;
             this.Links.Text = "";
             // 
@@ -165,11 +157,22 @@
             this.Prev.UseVisualStyleBackColor = false;
             this.Prev.Click += new System.EventHandler(this.Prev_Click);
             // 
+            // comboBox1
+            // 
+            this.comboBox1.BackColor = System.Drawing.SystemColors.ScrollBar;
+            this.comboBox1.Font = new System.Drawing.Font("Microsoft Sans Serif", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(238)));
+            this.comboBox1.FormattingEnabled = true;
+            this.comboBox1.Location = new System.Drawing.Point(369, 116);
+            this.comboBox1.Name = "comboBox1";
+            this.comboBox1.Size = new System.Drawing.Size(284, 32);
+            this.comboBox1.TabIndex = 65;
+            // 
             // Screen6
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.White;
+            this.Controls.Add(this.comboBox1);
             this.Controls.Add(this.Prev);
             this.Controls.Add(this.Links);
             this.Controls.Add(this.LinksLabel2);
@@ -178,7 +181,6 @@
             this.Controls.Add(this.Next);
             this.Controls.Add(this.Specialization);
             this.Controls.Add(this.KnownTechLabel);
-            this.Controls.Add(this.KnownTech);
             this.Controls.Add(this.Title);
             this.Name = "Screen6";
             this.Size = new System.Drawing.Size(1007, 725);
@@ -191,12 +193,12 @@
         private System.Windows.Forms.Button Next;
         private System.Windows.Forms.TextBox Specialization;
         private System.Windows.Forms.Label KnownTechLabel;
-        private System.Windows.Forms.TextBox KnownTech;
         private System.Windows.Forms.Label Title;
         private System.Windows.Forms.Label KnownTechLabel2;
         private System.Windows.Forms.Label LinksLabel2;
         private System.Windows.Forms.Label LinksLabel;
         private System.Windows.Forms.RichTextBox Links;
         private System.Windows.Forms.Button Prev;
+        private System.Windows.Forms.ComboBox comboBox1;
     }
 }

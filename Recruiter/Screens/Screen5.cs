@@ -18,6 +18,8 @@ namespace Recruiter
         #region Events
         public event Action StartForm6;
         public event Action StartForm4;
+
+        public event Action<string, string, string, string> UPLoadForm5;
         #endregion
         private void Next_Click(object sender, EventArgs e)
         {

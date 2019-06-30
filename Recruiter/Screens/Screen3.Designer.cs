@@ -72,9 +72,9 @@
             this.StartDateLabel.Location = new System.Drawing.Point(46, 492);
             this.StartDateLabel.Margin = new System.Windows.Forms.Padding(0);
             this.StartDateLabel.Name = "StartDateLabel";
-            this.StartDateLabel.Size = new System.Drawing.Size(419, 30);
+            this.StartDateLabel.Size = new System.Drawing.Size(259, 30);
             this.StartDateLabel.TabIndex = 32;
-            this.StartDateLabel.Text = "Data rozpoczęcia studiów (DD-MM-RRRR)";
+            this.StartDateLabel.Text = "Data rozpoczęcia studiów";
             this.StartDateLabel.TextAlign = System.Drawing.ContentAlignment.TopCenter;
             // 
             // WorkTitleLabel
@@ -216,9 +216,9 @@
             this.EndDateLabel.Location = new System.Drawing.Point(44, 557);
             this.EndDateLabel.Margin = new System.Windows.Forms.Padding(0);
             this.EndDateLabel.Name = "EndDateLabel";
-            this.EndDateLabel.Size = new System.Drawing.Size(421, 30);
+            this.EndDateLabel.Size = new System.Drawing.Size(261, 30);
             this.EndDateLabel.TabIndex = 37;
-            this.EndDateLabel.Text = "Data zakończenia studiów (DD-MM-RRRR)";
+            this.EndDateLabel.Text = "Data zakończenia studiów";
             this.EndDateLabel.TextAlign = System.Drawing.ContentAlignment.TopCenter;
             // 
             // Mode

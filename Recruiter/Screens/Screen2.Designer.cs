@@ -45,8 +45,10 @@
             this.PhotoLabel = new System.Windows.Forms.Label();
             this.AddPhoto = new System.Windows.Forms.Button();
             this.Next = new System.Windows.Forms.Button();
-            this.dateTimePicker1 = new System.Windows.Forms.DateTimePicker();
+            this.dateTimePickerdataurodzenia = new System.Windows.Forms.DateTimePicker();
             this.sciezka = new System.Windows.Forms.Label();
+            this.SecondNameLabel = new System.Windows.Forms.Label();
+            this.SecondName = new System.Windows.Forms.TextBox();
             this.SuspendLayout();
             // 
             // Title
@@ -238,17 +240,17 @@
             this.Next.UseVisualStyleBackColor = false;
             this.Next.Click += new System.EventHandler(this.Next_Click);
             // 
-            // dateTimePicker1
+            // dateTimePickerdataurodzenia
             // 
-            this.dateTimePicker1.CalendarMonthBackground = System.Drawing.SystemColors.ScrollBar;
-            this.dateTimePicker1.CustomFormat = "dd-MM-yyyy";
-            this.dateTimePicker1.Font = new System.Drawing.Font("Microsoft Sans Serif", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(238)));
-            this.dateTimePicker1.Location = new System.Drawing.Point(337, 205);
-            this.dateTimePicker1.MinDate = new System.DateTime(1900, 1, 1, 0, 0, 0, 0);
-            this.dateTimePicker1.Name = "dateTimePicker1";
-            this.dateTimePicker1.Size = new System.Drawing.Size(412, 29);
-            this.dateTimePicker1.TabIndex = 19;
-            this.dateTimePicker1.Value = new System.DateTime(2000, 1, 1, 0, 0, 0, 0);
+            this.dateTimePickerdataurodzenia.CalendarMonthBackground = System.Drawing.SystemColors.ScrollBar;
+            this.dateTimePickerdataurodzenia.CustomFormat = "MM/dd/yy";
+            this.dateTimePickerdataurodzenia.Font = new System.Drawing.Font("Microsoft Sans Serif", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(238)));
+            this.dateTimePickerdataurodzenia.Location = new System.Drawing.Point(337, 205);
+            this.dateTimePickerdataurodzenia.MinDate = new System.DateTime(1900, 1, 1, 0, 0, 0, 0);
+            this.dateTimePickerdataurodzenia.Name = "dateTimePickerdataurodzenia";
+            this.dateTimePickerdataurodzenia.Size = new System.Drawing.Size(412, 29);
+            this.dateTimePickerdataurodzenia.TabIndex = 19;
+            this.dateTimePickerdataurodzenia.Value = new System.DateTime(2000, 1, 1, 0, 0, 0, 0);
             // 
             // sciezka
             // 
@@ -258,13 +260,38 @@
             this.sciezka.Size = new System.Drawing.Size(0, 13);
             this.sciezka.TabIndex = 20;
             // 
+            // SecondNameLabel
+            // 
+            this.SecondNameLabel.AutoSize = true;
+            this.SecondNameLabel.Font = new System.Drawing.Font("Segoe UI", 16F);
+            this.SecondNameLabel.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(30)))), ((int)(((byte)(80)))), ((int)(((byte)(190)))));
+            this.SecondNameLabel.Location = new System.Drawing.Point(636, 68);
+            this.SecondNameLabel.Margin = new System.Windows.Forms.Padding(0);
+            this.SecondNameLabel.Name = "SecondNameLabel";
+            this.SecondNameLabel.Size = new System.Drawing.Size(78, 30);
+            this.SecondNameLabel.TabIndex = 22;
+            this.SecondNameLabel.Text = "Drugie";
+            this.SecondNameLabel.TextAlign = System.Drawing.ContentAlignment.TopCenter;
+            // 
+            // SecondName
+            // 
+            this.SecondName.BackColor = System.Drawing.SystemColors.ScrollBar;
+            this.SecondName.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
+            this.SecondName.Font = new System.Drawing.Font("Segoe UI", 14F);
+            this.SecondName.Location = new System.Drawing.Point(744, 70);
+            this.SecondName.Name = "SecondName";
+            this.SecondName.Size = new System.Drawing.Size(215, 32);
+            this.SecondName.TabIndex = 21;
+            // 
             // Screen2
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.White;
+            this.Controls.Add(this.SecondNameLabel);
+            this.Controls.Add(this.SecondName);
             this.Controls.Add(this.sciezka);
-            this.Controls.Add(this.dateTimePicker1);
+            this.Controls.Add(this.dateTimePickerdataurodzenia);
             this.Controls.Add(this.Next);
             this.Controls.Add(this.AddPhoto);
             this.Controls.Add(this.PhotoLabel);
@@ -305,7 +332,9 @@
         private System.Windows.Forms.Label PhotoLabel;
         private System.Windows.Forms.Button AddPhoto;
         private System.Windows.Forms.Button Next;
-        private System.Windows.Forms.DateTimePicker dateTimePicker1;
+        private System.Windows.Forms.DateTimePicker dateTimePickerdataurodzenia;
         private System.Windows.Forms.Label sciezka;
+        private System.Windows.Forms.Label SecondNameLabel;
+        private System.Windows.Forms.TextBox SecondName;
     }
 }

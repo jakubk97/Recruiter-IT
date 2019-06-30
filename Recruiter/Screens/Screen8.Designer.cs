@@ -80,7 +80,8 @@
             // 
             // RecruiterInfo
             // 
-            this.RecruiterInfo.BorderStyle = System.Windows.Forms.BorderStyle.None;
+            this.RecruiterInfo.BackColor = System.Drawing.SystemColors.ScrollBar;
+            this.RecruiterInfo.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
             this.RecruiterInfo.Font = new System.Drawing.Font("Segoe UI", 14F);
             this.RecruiterInfo.Location = new System.Drawing.Point(49, 147);
             this.RecruiterInfo.Name = "RecruiterInfo";
@@ -90,7 +91,8 @@
             // 
             // Interests
             // 
-            this.Interests.BorderStyle = System.Windows.Forms.BorderStyle.None;
+            this.Interests.BackColor = System.Drawing.SystemColors.ScrollBar;
+            this.Interests.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
             this.Interests.Font = new System.Drawing.Font("Segoe UI", 14F);
             this.Interests.Location = new System.Drawing.Point(49, 332);
             this.Interests.Name = "Interests";

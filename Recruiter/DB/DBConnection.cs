@@ -2,7 +2,7 @@
 
 namespace Recruiter
 {
-    class DBConnection
+    public sealed class DBConnection
     {
         private static DBConnection instance = null;
         public static DBConnection Instance

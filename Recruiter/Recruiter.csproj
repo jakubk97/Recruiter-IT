@@ -68,10 +68,9 @@
   <ItemGroup>
     <Compile Include="DB\DBConnection.cs" />
     <Compile Include="DB\DBInfo.Designer.cs" />
-    <Compile Include="DB\QuizRepository.cs" />
+    <Compile Include="DB\Repository.cs" />
     <Compile Include="Forma.cs" />
     <Compile Include="IView.cs" />
-    <Compile Include="Model.cs" />
     <Compile Include="Presenter.cs" />
     <Compile Include="Screens\Screen4.cs">
       <SubType>UserControl</SubType>

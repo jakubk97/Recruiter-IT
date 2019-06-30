@@ -19,10 +19,15 @@ namespace Recruiter
 
         #region Events
         public event Action StartForm3;
+        public event Action<string, string, string, string, string, string, string, string> UPLoadForm2;
         #endregion
 
         private void Next_Click(object sender, EventArgs e)
         {
+            if (UPLoadForm2 != null)
+                UPLoadForm2(FirstName.Text,SecondName.Text, Surname.Text, dateTimePickerdataurodzenia.Value.ToShortDateString()
+                    , Email.Text, Phone.Text, Address.Text, imageString);
+
             if (StartForm3 != null)
                 StartForm3();
         }
